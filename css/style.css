@@ -1,3 +1,45 @@
 body {
   font-family: "Noto Sans JP";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 128px;
+  width: 100%;
+}
+.header .header_left {
+  margin-right: 82px;
+}
+.header .header_right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}
+.header .header_right ul {
+  display: flex;
+  padding: 38px 0;
+  font-size: 0.875rem;
+  list-style: none;
+}
+.header .header_right ul li {
+  margin-right: 25px;
+}
+.header .header_right ul li a {
+  color: #1A1311;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header .header_right .sales_info {
+  background: #1A1311;
+  color: white;
+  padding: 15px;
+  text-align: right;
+}
+.header .header_right .sales_info h3 {
+  font-size: 1.2rem;
+}
+.header .header_right .sales_info p {
+  font-size: 0.875rem;
 }/*# sourceMappingURL=style.css.map */
