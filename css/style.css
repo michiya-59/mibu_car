@@ -1,45 +1,215 @@
-body {
+@charset "UTF-8";
+html {
+  font-size: 62.5%; /* 1rem → 10px */
   font-family: "Noto Sans JP";
+  font-weight: 700;
+}
+@media (max-width: 960px) {
+  html {
+      font-size: 50%; /* 1rem → 8px */
+  }
+}
+body {
+  font-size: 1.6rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none ;
+}
+/*横幅900のひろいやつ*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 62px;
+}
+@media (max-width: 1200px) {
+  .container {
+      width: 90%;
+      padding: 0;
+  }
+}
+/*横幅660のせまいやつ*/
+.container-660 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 660px;
+}
+@media (max-width: 1000px) {
+  .container-660 {
+      width: 90%;
+      padding: 0;
+  }
+}
+/*横幅800のやつ*/
+.container-800 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;/*ここを変える*/
+}
+@media (max-width: 1000px) {
+  .container-800 {
+      width: 90%;
+      padding: 0;
+  }
 }
 
+/* 共通パーツ */
+a:hover {
+  opacity: 0.6;
+}
+
+.common-btn-red{
+  font-size: 2.6rem;
+  text-align: center;
+  background: #DC000C;
+  color: white;
+  display: block;
+  width: 50rem;
+  text-decoration: none;
+  font-weight: 100;
+  padding: 2rem 0;
+  margin: 0 auto;
+  margin-top: 3.2rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  box-shadow: 0px 1px 7px 1px #c6c6c6;
+}
+/* 共通パーツ */
+
+/* ヘッダー */
 .header {
   display: flex;
   align-items: center;
   padding: 0 128px;
   width: 100%;
 }
-.header .header_left {
+.header .header-left {
   margin-right: 82px;
 }
-.header .header_right {
+.header .header-right {
   display: flex;
   justify-content: right;
   align-items: center;
   width: 100%;
 }
-.header .header_right ul {
+.header .header-right ul {
   display: flex;
   padding: 38px 0;
   font-size: 0.875rem;
   list-style: none;
 }
-.header .header_right ul li {
+.header .header-right ul li {
   margin-right: 25px;
 }
-.header .header_right ul li a {
+.header .header-right ul li a {
   color: #1A1311;
   font-weight: bold;
   text-decoration: none;
 }
-.header .header_right .sales_info {
+.header .header-right .header-info {
   background: #1A1311;
   color: white;
   padding: 15px;
   text-align: right;
 }
-.header .header_right .sales_info h3 {
+.header .header-right .header-info h3 {
   font-size: 1.2rem;
 }
-.header .header_right .sales_info p {
+.header .header-right .header-info p {
   font-size: 0.875rem;
-}/*# sourceMappingURL=style.css.map */
+}
+/* ヘッダー */
+
+/* メインビジュアル */
+.main_visual {
+  margin-bottom: 50px;
+}
+.main_visual img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+/* メインビジュアル */
+
+/* 会社案内トップ */
+.about{
+  padding: 6.6rem 0;
+}
+.about-text{
+  font-size: 3rem;
+  text-align: center;
+  line-height: 4.6rem;
+}
+/* 会社案内トップ */
+
+/* スライダー */
+.slider {
+  margin: 0 -1.3rem; /* 一枚一枚の間隔を13pxに設定 */
+  overflow: hidden;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  margin: 0 -1.3rem;
+}
+/* スライダー */
+
+/* スライダーの左右ボタンのスタイル */
+.slick-prev{
+  position: absolute !important;
+  z-index: 2 !important;
+  left: 27% !important;
+  background: #000000 !important;
+  border: 1px solid #fff !important;
+  border-radius: 50% !important;
+  width: 6.5rem !important;
+  height: 6.5rem !important;
+}
+.slick-prev::before, .slick-next::before{
+  content: '' !important;
+  position: absolute;
+  width: 2.0rem;
+  height: 0.25rem;
+  background-color: white;
+  top: 2.3rem;
+  opacity: 1 !important;
+  transform: rotate(131deg);
+  left: 30%;
+}
+.slick-prev::after, .slick-next::after{
+  content: '' !important;
+  position: absolute;
+  width: 0.25rem;
+  height: 2.0rem;
+  background-color: white;
+  opacity: 1 !important;
+  transform: rotate(-46deg);
+  left: 45%;
+  top: 44%;
+}
+.slick-next{
+  position: absolute !important;
+  z-index: 2 !important;
+  right: 28.5% !important;
+  background: #000000 !important;
+  border: 1px solid #fff !important;
+  border-radius: 50% !important;
+  width: 6.5rem !important;
+  height: 6.5rem !important;
+}
+.slick-next::before{
+  transform: rotate(47deg);
+  left: 36%;
+}
+.slick-next::after{
+  transform: rotate(-136deg);
+  left: 52%;
+}
+
+/* スライダーの左右ボタンのスタイル */
+
+/*# sourceMappingURL=style.css.map */

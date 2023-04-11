@@ -6,28 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Slick -->
+  <link rel="stylesheet" href="slick_css/slick.css">
+  <link rel="stylesheet" href="slick_css/slick-theme.css">
   <!-- GoogleFonts指定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
-  <!-- GoogleFonts指定 -->
   <title>【公式】ミブ自動車販売|京都で地域密着 50 年以上の実績!中古車販売・車検・整備 </title>
   <meta name="description" content= “京都市左京区のミブ自動車販売は新車・中古車販売・車検整備はもちろんのこと、鈑金・塗装・保険までお客さまの立場に立ってあらゆる角度から満足していただけるようカーライフをサポートします。”>
 </head>
 <body>
+  <!-- ヘッダー -->
   <header>
     <div class="header">
-      <div class="header_left">
+      <div class="header-left">
         <img src="image/logo.svg" alt="">
       </div>
-      <nav class="header_right">
+      <nav class="header-right">
         <ul>
           <li><a href="">中古車販売</a></li>
           <li><a href="">アフターメンテナンス</a></li>
           <li><a href="">会社案内</a></li>
           <li><a href="">お問い合わせ</a></li>
         </ul>
-        <div class="sales_info">
+        <div class="header-info">
           <h3>tel.075-791-6156</h3>
           <p>受付時間／9:00〜18:00<br>
             (月〜土曜)</p>
@@ -35,5 +38,44 @@
       </nav>
     </div>
   </header>
+  <main>
+    <!-- メインビジュアル -->
+    <section class="main_visual">
+      <img src="image/mv1_pc.png" alt="">
+    </section>
+
+    <!-- スライダー -->
+    <section class="slider">
+      <div><img src="image/demo_car1.png"></div>
+      <div><img src="image/demo_car2.png"></div>
+      <div><img src="image/demo_car2.png"></div>
+      <div><img src="image/demo_car1.png"></div>
+      <div><img src="image/demo_car2.png"></div>
+      <div><img src="image/demo_car2.png"></div>
+    </section>
+
+    <!-- 会社案内について -->
+    <section class="about" id="about">
+      <div class="container-660">
+        <p class="about-text">
+          この地にオープンして50年以上、<br>
+          地域に密着した歴史!!<br>
+          アットホームな雰囲気でなんでも相談しやすい<br>
+          コーヒーの美味しい車屋さんです!<br>
+        </p>
+        <a href="" class="common-btn-red">会社案内</a>
+      </div>
+    </section>
+
+    <!-- 事業内容 -->
+    <section id="business">
+      <div class="container-660">
+      </div>
+    </section>
+  </main>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="slick_js/slick.min.js"></script>
+  <script src="js/slick.js"></script>
 </body>
 </html>
