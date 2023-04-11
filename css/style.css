@@ -77,6 +77,29 @@ a:hover {
   border-radius: 50px;
   border: 2px solid white;
   box-shadow: 0px 1px 7px 1px #c6c6c6;
+  position: relative;
+}
+.common-btn-red::before{
+  content: '' !important;
+  position: absolute;
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: white;
+  opacity: 1 !important;
+  transform: rotate(44deg);
+  right: 7.6%;
+  top: 41%;
+}
+.common-btn-red::after{
+  content: '' !important;
+  position: absolute;
+  width: 0.25rem;
+  height: 2.5rem;
+  background-color: white;
+  opacity: 1 !important;
+  transform: rotate(-131deg);
+  right: 9.9%;
+  top: 46%;
 }
 /* 共通パーツ */
 
@@ -209,7 +232,6 @@ a:hover {
   transform: rotate(-136deg);
   left: 52%;
 }
-
 /* スライダーの左右ボタンのスタイル */
 
 /*# sourceMappingURL=style.css.map */
