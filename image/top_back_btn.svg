@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83" height="83" viewBox="0 0 83 83">
+  <defs>
+    <filter id="楕円形_1" x="0" y="0" width="83" height="83" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="上部移動ボタン" transform="translate(9 3)">
+    <g id="グループ_53" data-name="グループ 53" transform="translate(-665 670) rotate(-90)">
+      <g transform="matrix(0, 1, -1, 0, 673, 656)" filter="url(#楕円形_1)">
+        <g id="楕円形_1-2" data-name="楕円形 1" transform="translate(74 3) rotate(90)" fill="#1a1311" stroke="#fff" stroke-width="3">
+          <circle cx="32.5" cy="32.5" r="32.5" stroke="none"/>
+          <circle cx="32.5" cy="32.5" r="31" fill="none"/>
+        </g>
+      </g>
+      <path id="パス_1" data-name="パス 1" d="M110.5,684.056l-10.453,12.224L110.5,708.056" transform="translate(743 1393.556) rotate(180)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
