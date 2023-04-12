@@ -1,45 +1,509 @@
-body {
+@charset "UTF-8";
+html {
+  font-size: 62.5%; /* 1rem → 10px */
   font-family: "Noto Sans JP";
+  font-weight: 700;
+}
+@media (max-width: 960px) {
+  html {
+      font-size: 50%; /* 1rem → 8px */
+  }
+}
+body {
+  font-size: 1.6rem;
+}
+main{
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none ;
+}
+/*横幅900のひろいやつ*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 62px;
+}
+@media (max-width: 1200px) {
+  .container {
+      width: 90%;
+      padding: 0;
+  }
+}
+/*横幅660のせまいやつ*/
+.container-660 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 660px;
+}
+@media (max-width: 1000px) {
+  .container-660 {
+      width: 90%;
+      padding: 0;
+  }
+}
+/*横幅800のやつ*/
+.container-800 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;/*ここを変える*/
+}
+@media (max-width: 1000px) {
+  .container-800 {
+      width: 90%;
+      padding: 0;
+  }
 }
 
+/* 共通パーツ */
+a:hover {
+  opacity: 0.6;
+}
+
+.common-btn{
+  font-size: 2.6rem;
+  text-align: center;
+  color: white;
+  display: block;
+  width: 50rem;
+  text-decoration: none;
+  font-weight: 100;
+  padding: 2rem 0;
+  margin: 0 auto;
+  margin-top: 3.2rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  box-shadow: 0px 1px 7px 1px #c6c6c6;
+  position: relative;
+}
+.common-btn::before{
+  content: '' !important;
+  position: absolute;
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: white;
+  opacity: 1 !important;
+  transform: rotate(44deg);
+  right: 7.6%;
+  top: 41%;
+}
+.common-btn::after{
+  content: '' !important;
+  position: absolute;
+  width: 0.25rem;
+  height: 2.5rem;
+  background-color: white;
+  opacity: 1 !important;
+  transform: rotate(-131deg);
+  right: 9.9%;
+  top: 46%;
+}
+.red{
+  background: #DC000C;
+}
+.orange{
+  background: #FF783C;
+}
+/* 共通パーツ */
+
+/* ヘッダー */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
 .header {
   display: flex;
   align-items: center;
-  padding: 0 128px;
   width: 100%;
+  height: 9rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
-.header .header_left {
-  margin-right: 82px;
+.header .header-left {
+  height: 3.5rem;
 }
-.header .header_right {
+.header .header-left img{
+  width: 30.9rem;
+}
+.header .header-right {
   display: flex;
   justify-content: right;
   align-items: center;
   width: 100%;
 }
-.header .header_right ul {
+.header .header-right ul {
   display: flex;
   padding: 38px 0;
   font-size: 0.875rem;
   list-style: none;
 }
-.header .header_right ul li {
-  margin-right: 25px;
+.header .header-right ul li {
+  margin-right: 2.5rem;
+  font-size: 1.4rem;
 }
-.header .header_right ul li a {
+.header .header-right ul li a {
   color: #1A1311;
   font-weight: bold;
   text-decoration: none;
 }
-.header .header_right .sales_info {
+.header .header-right .header-info {
   background: #1A1311;
   color: white;
-  padding: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 19.1rem;
+  height: 9rem;
+}
+.header .header-right .header-info h3 {
+  font-size: 1.6rem;
+}
+.header .header-right .header-info p {
+  font-size: 1.2rem;
+  font-weight: 100;
   text-align: right;
 }
-.header .header_right .sales_info h3 {
-  font-size: 1.2rem;
+/* ヘッダー */
+
+/* メインビジュアル */
+.main_visual {
+  margin-bottom: 50px;
 }
-.header .header_right .sales_info p {
-  font-size: 0.875rem;
-}/*# sourceMappingURL=style.css.map */
+.main_visual img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+/* メインビジュアル */
+
+/* 会社案内トップ */
+.about{
+  padding: 6.6rem 0;
+}
+.about-text{
+  font-size: 3rem;
+  text-align: center;
+  line-height: 4.6rem;
+}
+/* 会社案内トップ */
+
+/* 事業内容トップ */
+.business{
+  text-align: center;
+  background: linear-gradient(171.5deg, #dc000c 0%, #dc000c 61%, #FF783C 50%, #FF783C 100%);
+  padding: 5.5rem 0 4rem 0;
+  position: relative;
+}
+.business-used{
+  height: 82rem;
+  margin-bottom: 8rem;
+}
+.business-maintenance{
+  height: 75.5rem;
+  margin-bottom: 0rem;
+}
+.business-used h2, .business-maintenance h2{
+  font-size: 3.2rem;
+  color: white;
+  margin-bottom: 3.2rem;
+}
+.business-used-box, .business-maintenance-box{
+  height: 68rem;
+}
+.business-used-box-top, .business-maintenance-box-top{
+  width: 66rem;
+  height: 43rem;
+}
+.business-used-box-bottom, .business-maintenance-box-bottom{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: white;
+  padding: 35px 0;
+}
+.business-used-box-bottom p, .business-maintenance-box-bottom p{
+  font-size: 2rem;
+}
+/* 事業内容トップ */
+
+/* お悩み内容 */
+.business-trouble{
+  background: #FF783C;
+  margin-top: 21rem;
+}
+.business-trouble-text{
+  text-align: center;
+  color: white;
+  font-size: 3.2rem;
+  font-weight: 100;
+  margin-bottom: 8.1rem;
+}
+.business-trouble-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.business-trouble-content-part{
+  width: 24.2rem;
+  margin-bottom: 6rem;
+}
+.business-trouble-content-img{
+  padding: 4.8rem 0 5rem 0;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+  width: 22.5rem;
+  height: 22.5rem;
+  background-color: white;
+  text-align: center;
+}
+.business-trouble-content-part:nth-child(1) img {
+  width: 9.3rem;
+}
+.business-trouble-content-part:nth-child(2) img {
+  width: 14rem;
+}
+.business-trouble-content-part:nth-child(3) img {
+  width: 12.8rem;
+}
+.business-trouble-content-part:nth-child(4) img {
+  width: 12.5rem;
+}
+.business-trouble-content-part p{
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 100;
+}
+/* お悩み内容 */
+
+/* 会社案内 */
+.company{
+  text-align: center;
+}
+.company-title{
+  font-size: 3.2rem;
+  margin: 10rem 0 6.8rem 0;
+}
+.company-feature{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4.2rem;
+}
+.company-feature h3{
+  height: 17.8rem;
+  width: 17.8rem;
+  font-size: 2.5rem;
+  background: #DC000C;
+  color: white;
+  font-weight: 100;
+  border-radius: 50%;
+  line-height: 17.8rem;
+}
+.company-text{
+  font-size: 2.0rem;
+  font-weight: 100;
+  line-height: 3.8rem;
+}
+.company-slider{
+  overflow: hidden;
+  margin: 5.7rem 0;
+}
+
+.company-info{
+  margin-bottom: 5.7rem;
+}
+.company-info-part{
+  display: flex;
+  border-bottom: 1px solid #767676;
+  text-align: left;
+  font-weight: 100;
+  font-size: 1.8rem;
+  padding: 2rem 0;
+  position: relative;
+}
+.company-info-part::before{
+  content: '';
+  position: absolute;
+  width: 17%;
+  height: 0.2rem;
+  background-color: #D6101D;
+  bottom: -0.15rem;
+}
+.company-info-part:nth-child(1){
+  padding-bottom: 2rem;
+}
+.company-info-part p:nth-child(1){
+  width: 17%;
+}
+.company-info-part p:nth-child(2){
+  width: 83%;
+}
+.company-business-content p, .company-facilities p, .company-qualification p{
+  width: 100% !important;
+}
+iframe{
+  width: 100%;
+  height: 40rem;
+}
+/* 会社案内 */
+
+/* フッター */
+.footer{
+  background: linear-gradient(to bottom, #DC000C 0%, #DC000C 63%, #1A1311 47%, #1A1311 100%);
+  height: 45.6rem;
+  color: white;
+}
+.footer-top{
+  padding: 6rem 0;
+}
+.footer-top h1{
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.footer-top-contact{
+  display: flex;
+}
+.footer-top-contact-left{
+  width: 49%;
+  border-right: 1px solid white;
+  text-align: left;
+  height: 9.8rem;
+  padding-top: 1.5rem;
+}
+.footer-top-contact-left h1{
+  font-size: 4rem;
+  text-align: left;
+  margin-bottom: 0;
+}
+.footer-top-contact-left p{
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+.footer-top-contact a{
+  display: block;
+  position: relative;
+  width: 43rem;
+  height: 8.8rem;
+  background: #FF783C;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 100;
+  border-radius: 50px;
+  border: 2px solid white;
+  margin: 1rem 0 0 auto;
+  padding: 2rem 0 0 3rem;
+  line-height: 47px;
+}
+.footer-top-contact a::before{
+  content: url('../image/footer_contact_icon.svg');
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 27px;
+  left: 37px;
+}
+.footer-bottom{
+  display: flex;
+  padding: 3rem 12.8rem;
+}
+.footer-bottom-content-left{
+  width: 53rem;
+}
+.footer-bottom-content-left img{
+  width: 28.9rem;
+  height: auto;
+}
+.footer-bottom-content-lef h2{
+  font-size: 2.5rem;
+}
+.footer-bottom-content-lef p{
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+.footer-bottom-content-right{
+  display: flex;
+  width: 54%;
+  justify-content: space-between;
+}
+.footer-bottom-content-right li a{
+  color: white;
+  text-decoration: none;
+}
+/* フッター */
+
+
+/* スライダー */
+.slider {
+  margin: 0 -1.3rem; /* 一枚一枚の間隔を13pxに設定 */
+  overflow: hidden;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  margin: 0 -1.3rem;
+}
+/* スライダー */
+
+/* スライダーの左右ボタンのスタイル */
+.slick-prev{
+  position: absolute !important;
+  z-index: 2 !important;
+  left: 27% !important;
+  background: #000000 !important;
+  border: 1px solid #fff !important;
+  border-radius: 50% !important;
+  width: 6.5rem !important;
+  height: 6.5rem !important;
+}
+.slick-prev::before, .slick-next::before{
+  content: '' !important;
+  position: absolute;
+  width: 2.0rem;
+  height: 0.25rem;
+  background-color: white;
+  top: 2.3rem;
+  opacity: 1 !important;
+  transform: rotate(131deg);
+  left: 30%;
+}
+.slick-prev::after, .slick-next::after{
+  content: '' !important;
+  position: absolute;
+  width: 0.25rem;
+  height: 2.0rem;
+  background-color: white;
+  opacity: 1 !important;
+  transform: rotate(-46deg);
+  left: 45%;
+  top: 44%;
+}
+.slick-next{
+  position: absolute !important;
+  z-index: 2 !important;
+  right: 28.5% !important;
+  background: #000000 !important;
+  border: 1px solid #fff !important;
+  border-radius: 50% !important;
+  width: 6.5rem !important;
+  height: 6.5rem !important;
+}
+.slick-next::before{
+  transform: rotate(47deg);
+  left: 36%;
+}
+.slick-next::after{
+  transform: rotate(-136deg);
+  left: 52%;
+}
+/* スライダーの左右ボタンのスタイル */
+
+/*# sourceMappingURL=style.css.map */
