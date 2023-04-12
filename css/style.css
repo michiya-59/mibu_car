@@ -12,6 +12,9 @@ html {
 body {
   font-size: 1.6rem;
 }
+main{
+  overflow: hidden;
+}
 img {
   width: 100%;
   height: auto;
@@ -197,12 +200,10 @@ a:hover {
 .business-used-box, .business-maintenance-box{
   height: 68rem;
 }
-
 .business-used-box-top, .business-maintenance-box-top{
   width: 66rem;
   height: 43rem;
 }
-
 .business-used-box-bottom, .business-maintenance-box-bottom{
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -256,14 +257,86 @@ a:hover {
 .business-trouble-content-part:nth-child(4) img {
   width: 12.5rem;
 }
-
 .business-trouble-content-part p{
   text-align: center;
   font-size: 2rem;
   color: white;
   font-weight: 100;
 }
-  /* お悩み内容 */
+/* お悩み内容 */
+
+/* 会社案内 */
+.company{
+  text-align: center;
+}
+.company-title{
+  font-size: 3.2rem;
+  margin: 10rem 0 6.8rem 0;
+}
+.company-feature{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4.2rem;
+}
+.company-feature h3{
+  height: 17.8rem;
+  width: 17.8rem;
+  font-size: 2.5rem;
+  background: #DC000C;
+  color: white;
+  font-weight: 100;
+  border-radius: 50%;
+  line-height: 17.8rem;
+}
+.company-text{
+  font-size: 2.0rem;
+  font-weight: 100;
+  line-height: 3.8rem;
+}
+
+.company-slider{
+  overflow: hidden;
+  margin: 5.7rem 0;
+}
+
+.company-info{
+  margin-bottom: 5.7rem;
+}
+.company-info-part{
+  display: flex;
+  border-bottom: 1px solid #767676;
+  text-align: left;
+  font-weight: 100;
+  font-size: 1.8rem;
+  padding: 2rem 0;
+  position: relative;
+}
+.company-info-part::before{
+  content: '';
+  position: absolute;
+  width: 17%;
+  height: 0.2rem;
+  background-color: #D6101D;
+  bottom: -0.15rem;
+}
+.company-info-part:nth-child(1){
+  padding-bottom: 2rem;
+}
+.company-info-part p:nth-child(1){
+  width: 17%;
+}
+.company-info-part p:nth-child(2){
+  width: 83%;
+}
+.company-business-content p, .company-facilities p, .company-qualification p{
+  width: 100% !important;
+}
+iframe{
+  width: 100%;
+  height: 40rem;
+}
+/* 会社案内 */
+
 
 /* スライダー */
 .slider {
