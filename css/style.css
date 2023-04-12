@@ -112,14 +112,25 @@ a:hover {
 /* 共通パーツ */
 
 /* ヘッダー */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
 .header {
   display: flex;
   align-items: center;
-  padding: 0 128px;
   width: 100%;
+  height: 9rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .header .header-left {
-  margin-right: 82px;
+  height: 3.5rem;
+}
+.header .header-left img{
+  width: 30.9rem;
 }
 .header .header-right {
   display: flex;
@@ -134,7 +145,8 @@ a:hover {
   list-style: none;
 }
 .header .header-right ul li {
-  margin-right: 25px;
+  margin-right: 2.5rem;
+  font-size: 1.4rem;
 }
 .header .header-right ul li a {
   color: #1A1311;
@@ -144,14 +156,18 @@ a:hover {
 .header .header-right .header-info {
   background: #1A1311;
   color: white;
-  padding: 15px;
-  text-align: right;
+  padding: 1.5rem;
+  text-align: center;
+  width: 19.1rem;
+  height: 9rem;
 }
 .header .header-right .header-info h3 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 .header .header-right .header-info p {
-  font-size: 0.875rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  text-align: right;
 }
 /* ヘッダー */
 
@@ -293,7 +309,6 @@ a:hover {
   font-weight: 100;
   line-height: 3.8rem;
 }
-
 .company-slider{
   overflow: hidden;
   margin: 5.7rem 0;
@@ -336,6 +351,94 @@ iframe{
   height: 40rem;
 }
 /* 会社案内 */
+
+/* フッター */
+.footer{
+  background: linear-gradient(to bottom, #DC000C 0%, #DC000C 63%, #1A1311 47%, #1A1311 100%);
+  height: 45.6rem;
+  color: white;
+}
+.footer-top{
+  padding: 6rem 0;
+}
+.footer-top h1{
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.footer-top-contact{
+  display: flex;
+}
+.footer-top-contact-left{
+  width: 49%;
+  border-right: 1px solid white;
+  text-align: left;
+  height: 9.8rem;
+  padding-top: 1.5rem;
+}
+.footer-top-contact-left h1{
+  font-size: 4rem;
+  text-align: left;
+  margin-bottom: 0;
+}
+.footer-top-contact-left p{
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+.footer-top-contact a{
+  display: block;
+  position: relative;
+  width: 43rem;
+  height: 8.8rem;
+  background: #FF783C;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 100;
+  border-radius: 50px;
+  border: 2px solid white;
+  margin: 1rem 0 0 auto;
+  padding: 2rem 0 0 3rem;
+  line-height: 47px;
+}
+.footer-top-contact a::before{
+  content: url('../image/footer_contact_icon.svg');
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 27px;
+  left: 37px;
+}
+.footer-bottom{
+  display: flex;
+  padding: 3rem 12.8rem;
+}
+.footer-bottom-content-left{
+  width: 53rem;
+}
+.footer-bottom-content-left img{
+  width: 28.9rem;
+  height: auto;
+}
+.footer-bottom-content-lef h2{
+  font-size: 2.5rem;
+}
+.footer-bottom-content-lef p{
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+.footer-bottom-content-right{
+  display: flex;
+  width: 54%;
+  justify-content: space-between;
+}
+.footer-bottom-content-right li a{
+  color: white;
+  text-decoration: none;
+}
+/* フッター */
 
 
 /* スライダー */
