@@ -62,10 +62,9 @@ a:hover {
   opacity: 0.6;
 }
 
-.common-btn-red{
+.common-btn{
   font-size: 2.6rem;
   text-align: center;
-  background: #DC000C;
   color: white;
   display: block;
   width: 50rem;
@@ -79,7 +78,7 @@ a:hover {
   box-shadow: 0px 1px 7px 1px #c6c6c6;
   position: relative;
 }
-.common-btn-red::before{
+.common-btn::before{
   content: '' !important;
   position: absolute;
   width: 2.5rem;
@@ -90,7 +89,7 @@ a:hover {
   right: 7.6%;
   top: 41%;
 }
-.common-btn-red::after{
+.common-btn::after{
   content: '' !important;
   position: absolute;
   width: 0.25rem;
@@ -100,6 +99,12 @@ a:hover {
   transform: rotate(-131deg);
   right: 9.9%;
   top: 46%;
+}
+.red{
+  background: #DC000C;
+}
+.orange{
+  background: #FF783C;
 }
 /* 共通パーツ */
 
@@ -168,6 +173,97 @@ a:hover {
   line-height: 4.6rem;
 }
 /* 会社案内トップ */
+
+/* 事業内容トップ */
+.business{
+  text-align: center;
+  background: linear-gradient(171.5deg, #dc000c 0%, #dc000c 61%, #FF783C 50%, #FF783C 100%);
+  padding: 5.5rem 0 4rem 0;
+  position: relative;
+}
+.business-used{
+  height: 82rem;
+  margin-bottom: 8rem;
+}
+.business-maintenance{
+  height: 75.5rem;
+  margin-bottom: 0rem;
+}
+.business-used h2, .business-maintenance h2{
+  font-size: 3.2rem;
+  color: white;
+  margin-bottom: 3.2rem;
+}
+.business-used-box, .business-maintenance-box{
+  height: 68rem;
+}
+
+.business-used-box-top, .business-maintenance-box-top{
+  width: 66rem;
+  height: 43rem;
+}
+
+.business-used-box-bottom, .business-maintenance-box-bottom{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: white;
+  padding: 35px 0;
+}
+.business-used-box-bottom p, .business-maintenance-box-bottom p{
+  font-size: 2rem;
+}
+/* 事業内容トップ */
+
+/* お悩み内容 */
+.business-trouble{
+  background: #FF783C;
+  margin-top: 21rem;
+}
+.business-trouble-text{
+  text-align: center;
+  color: white;
+  font-size: 3.2rem;
+  font-weight: 100;
+  margin-bottom: 8.1rem;
+}
+.business-trouble-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.business-trouble-content-part{
+  width: 24.2rem;
+  margin-bottom: 6rem;
+}
+.business-trouble-content-img{
+  padding: 4.8rem 0 5rem 0;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+  width: 22.5rem;
+  height: 22.5rem;
+  background-color: white;
+  text-align: center;
+}
+.business-trouble-content-part:nth-child(1) img {
+  width: 9.3rem;
+}
+.business-trouble-content-part:nth-child(2) img {
+  width: 14rem;
+}
+.business-trouble-content-part:nth-child(3) img {
+  width: 12.8rem;
+}
+.business-trouble-content-part:nth-child(4) img {
+  width: 12.5rem;
+}
+
+.business-trouble-content-part p{
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 100;
+}
+  /* お悩み内容 */
 
 /* スライダー */
 .slider {
