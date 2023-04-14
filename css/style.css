@@ -97,7 +97,6 @@ a:hover {
   background: #FF783C;
 }
 .commont-top-btn{
-  margin-right: 12.8rem;
   width: 6.5rem;
   height: 6.5rem;
   position: absolute;
@@ -170,12 +169,12 @@ header{
 .footer{
   background: linear-gradient(to bottom, #DC000C 0%, #DC000C 65%, #1A1311 31%, #1A1311 100%);
   color: white;
-  position: relative;
 }
 .footer-top{
   max-width: 1152px;
   margin: 0 auto;
   padding: 6rem 0;
+  position: relative;
 }
 .footer-top h1{
   margin-bottom: 3rem;
@@ -476,27 +475,28 @@ iframe{
 
 /* 中古車ページ */
 /* 中古車内容 */
-.user-car-title{
+.common-title{
   width: 1024px;
   padding: 0 16rem;
   margin: 0 auto;
   position: relative;
 }
-.user-car-title h1:nth-child(1){
+.common-title h1:nth-child(1){
   font-family: Roboto;
   font-weight: 900;
   font-size: 16.8rem;
   text-align: center;
-  color: #dc000c;
-  opacity: 0.1;
   height: 11.7rem;
   line-height: 11.3rem;
 }
-.user-car-title h1:nth-child(2){
+.common-title h1:nth-child(2){
   position: absolute;
   top: 30%;
   font-size: 3.2rem;
   left: 42%;
+}
+.pink h1:nth-child(1){
+  color: #fee8e8;
 }
 .user-car-body{
   background: #fee8e8;
@@ -536,15 +536,15 @@ iframe{
 .user-car-lists-part-top-right{
   margin-left: 2rem;
 }
-.user-car-pay-amount{
+.common-pay-amounts{
   border-bottom: 1px solid #1914122b;
   padding-bottom: 1.35rem;
   margin-bottom: 1.5rem;
 }
-.user-car-pay-amount p:nth-child(1){
+.common-pay-amounts p:nth-child(1){
   font-size: 1.8rem;
 }
-.user-car-pay-amount p:nth-child(2){
+.common-pay-amounts p:nth-child(2){
   font-weight: bold;
   font-size: 3.2rem;
   line-height: 38px;
@@ -629,3 +629,119 @@ iframe{
   font-size: 1.8rem;
 }
 /* 新車販売テキスト */
+
+/* 中古車販売詳細ページ */
+.detail-container{
+  background: #fee8e8;
+  padding: 4.9rem 0 8.5rem 0;
+}
+.detail-content{
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
+  padding: 2.4rem 2.9rem 5.7rem 2.9rem;
+}
+.detail-content h2{
+  font-size: 2.6rem;
+  border-bottom: 1px solid #1914122b;
+  padding-bottom: 1.65rem;
+  margin-bottom: 2.35rem;
+}
+.detail-slider-container {
+  width: 100%;
+}
+
+.detail-slider-slick-img img {
+  width: 84.2rem;
+}
+.detail-thumbnail .slick-track {
+  transform: unset !important;
+}
+.detail-thumbnail-img {
+  width: 6.6rem !important;
+  height: 6.6rem !important;
+  opacity: 0.3;
+  transition: opacity .3s linear;
+}
+.detail-thumbnail-img:not(:last-child){
+  margin-right: 2rem;
+}
+.detail-thumbnail{
+  margin-bottom: 2.88rem;
+}
+.detail-thumbnail-img img{
+  height: 100% !important;
+  object-fit: cover;
+}
+.detail-thumbnail .slick-current {
+  opacity: 1;
+}
+
+.detail-sales-text{
+  font-size: 2.2rem;
+  color: #e64442;
+  margin-bottom: 2.4rem;
+}
+.detail-data-table{
+  border-collapse: collapse;
+}
+.detail-tr th{
+  background: #F7F7F7;
+  font-weight: normal;
+  font-size: 1.8rem;
+  width: 18rem;
+  height: 4rem;
+  color: #333333;
+  border: 1px solid #000;
+}
+.detail-tr td{
+  width: 24.7rem;
+  border: 1px solid #000;
+  font-weight: 100;
+  font-size: 1.8rem;
+  padding-left: 1.3rem;
+}
+.detail-equipment{
+  font-size: 2.2rem;
+  margin-top: 3.15rem;
+}
+.detail-equipment-lists{
+  font-size: 1.8rem;
+  font-weight: 100;
+  padding: 1.9rem 0;
+}
+.detail-notices{
+  font-size: 2.2rem;
+  border-top: 1px solid #1914122b;
+  padding: 3.05rem 0 1.75rem 0;
+}
+.detail-notices-text{
+  font-size: 1.8rem;
+  font-weight: 100;
+  padding: 1.9rem 0;
+  border-bottom: 1px solid #1914122b;
+}
+.detail-contact{
+  font-size: 3.2rem;
+  margin: 4.67rem 0 3.1rem 0;
+  text-align: center;
+}
+.detail-contact-content{
+  display: flex;
+  padding: 0 1.7rem 0 5rem;
+}
+.detail-contact-content-left{
+  margin-right: 3.2rem;
+  padding-top: 1.8rem;
+}
+.detail-contact-content-left p:nth-child(1){
+  font-size: 3.27rem;
+}
+.detail-contact-content-left p:nth-child(2){
+  font-weight: 100;
+  text-align: center;
+}
+.detail-contact-content a img{
+  width: 43rem;
+}
+/* 中古車販売詳細ページ */
