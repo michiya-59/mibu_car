@@ -1,3 +1,4 @@
+// TOPページ
 $(function () {
   $(".slider").slick({
     variableWidth: false,
@@ -14,5 +15,20 @@ $(function () {
     speed: 600, // フェードアニメーションの速度設定
     autoplaySpeed: 2000, // 再生速度（ミリ秒設定） 1000ミリ秒=1秒
     arrows: false, //矢印非表示
+  });
+});
+
+// 中古車詳細ページ
+$(function () {
+  $(".detail-slider").slick({
+    autoplay: false,
+    arrows: false,
+    fade: true,
+    asNavFor: ".detail-thumbnail",
+  });
+  $(".detail-thumbnail").slick({
+    slidesToShow: 10,
+    asNavFor: ".detail-slider",
+    focusOnSelect: true,
   });
 });
