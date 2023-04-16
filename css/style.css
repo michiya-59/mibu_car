@@ -26,7 +26,7 @@ ul {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 10.08rem;
+  max-width: 100.8rem;
   padding: 0 6.2rem;
 }
 @media (max-width: 1200px) {
