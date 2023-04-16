@@ -26,8 +26,8 @@ ul {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1008px;
-  padding: 0 62px;
+  max-width: 10.08rem;
+  padding: 0 6.2rem;
 }
 @media (max-width: 1200px) {
   .container {
@@ -39,7 +39,7 @@ ul {
 .container-660 {
   width: 100%;
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 72rem;
 }
 @media (max-width: 1000px) {
   .container-660 {
@@ -51,7 +51,7 @@ ul {
 .container-800 {
   width: 100%;
   margin: 0 auto;
-  max-width: 900px;/*ここを変える*/
+  max-width: 90rem;/*ここを変える*/
 }
 @media (max-width: 1000px) {
   .container-800 {
