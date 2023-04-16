@@ -219,7 +219,7 @@ header{
 
 /* フッター */
 .footer{
-  background: linear-gradient(to bottom, #DC000C 0%, #DC000C 65%, #1A1311 31%, #1A1311 100%);
+  background: linear-gradient(to bottom, #DC000C 0%, #DC000C 68%, #1A1311 32%, #1A1311 100%);
   color: white;
 }
 .footer-top{
