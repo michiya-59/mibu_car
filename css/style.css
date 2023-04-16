@@ -64,7 +64,6 @@ ul {
 a:hover {
   opacity: 0.6;
 }
-
 .common-btn{
   font-size: 2.6rem;
   text-align: center;
@@ -90,7 +89,6 @@ a:hover {
 }
 .red{
   background: #DC000C;
-
 }
 .orange{
   background: #FF783C;
@@ -125,6 +123,38 @@ a:hover {
 }
 .free{
   background-color: #818181;
+}
+.common-title{
+  position: relative;
+}
+.common-title h1{
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 16.8rem;
+  text-align: center;
+  height: 11.7rem;
+  line-height: 11.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.common-title h2{
+  position: absolute;
+  top: 30%;
+  font-size: 3.2rem;
+  left: 42%;
+}
+.pink h1{
+  color: #fee8e8;
+}
+.beige h1{
+  color: #ffe5d9;
+}
+.gray h1{
+  color: #EFEFEF;
+}
+.gray h2{
+  left: 40%;
 }
 /* 共通パーツ */
 
@@ -504,33 +534,6 @@ iframe{
 
 /* 中古車ページ */
 /* 中古車内容 */
-.common-title{
-  width: 1024px;
-  padding: 0 16rem;
-  margin: 0 auto;
-  position: relative;
-}
-.common-title h1{
-  font-family: Roboto;
-  font-weight: 900;
-  font-size: 16.8rem;
-  text-align: center;
-  height: 11.7rem;
-  line-height: 11.3rem;
-}
-.common-title h2{
-  position: absolute;
-  top: 30%;
-  font-size: 3.2rem;
-  left: 42%;
-}
-.pink h1{
-
-  color: #fee8e8;
-}
-.beige h1{
-  color: #ffe5d9;
-}
 .user-car-body{
   background: #fee8e8;
   position: relative;
@@ -949,4 +952,828 @@ form .contact-form-part textarea{
   border-radius: 50px;
   font-size: 2.2rem;
   line-height: 8.8rem;
+}
+/* 問い合わせフォーム */
+
+/* アフターメンテナンス */
+
+/* 上部のメニュー */
+.maintenance-menu-container{
+  background: #EFEFEF;
+}
+.maintenance-menu-content{
+  text-align: center;
+  padding: 7.88rem 0 9rem 0;
+}
+.maintenance-menu-lists{
+  display: flex;
+  flex-direction: column;
+  height: 51.7rem;
+}
+.maintenance-menu-lists a{
+  width: 90rem;
+  height: 10rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
+  font-size: 2.4rem;
+  line-height: 9rem;
+  margin-bottom: 3.3rem;
+}
+.maintenance-menu-list-block{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.3rem;
+}
+.maintenance-menu-list-block a{
+  width: 43.2rem;
+  height: 11.6rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
+  display: block;
+  text-decoration: none;
+  line-height: 8.5rem;
+  font-size: 2.4rem;
+  margin: 0;
+}
+.maintenance-menu-red{
+  position: relative;
+  border: 6px solid #d6101d;
+  color: #d6101d;
+}
+.maintenance-menu-red::after{
+  content: url('../image/after_maintenance_arrow_red.svg');
+  position: absolute;
+  right: 43%;
+}
+.maintenance-menu-orange{
+  position: relative;
+  color: #fe6e40;  
+  border: 6px solid #fe6e40;
+}
+.maintenance-menu-orange::after{
+  content: url('../image/after_maintenance_arrow_orange.svg');
+  position: absolute;
+  right: 48%;
+  top: 30%;
+}
+.maintenance-menu-emerald{
+  position: relative;
+  border: 6px solid #26AD97;
+  color: #26AD97;
+}
+.maintenance-menu-emerald::before{
+  content: "セットで\Aお得!";
+  position: absolute;
+  white-space: pre;
+  width: 12.9rem;
+  height: 12.9rem;
+  background-color: #DC000C;
+  border-radius: 50%;
+  color: white;
+  font-weight: 100;
+  top: -2.1rem;
+  left: -2.6rem;
+  line-height: 2.8rem;
+  padding-top: 4rem;
+  font-size: 2rem;
+}
+.maintenance-menu-emerald::after{
+  content: url('../image/after_maintenance_arrow_emerald.svg');
+  position: absolute;
+  right: 18%;
+}
+.maintenance-menu-gray{
+  position: relative;
+  border: 6px solid #767676;
+  color: #767676;
+}
+.maintenance-menu-gray::after{
+  content: url('../image/after_maintenance_arrow_gray.svg');
+  position: absolute;
+  right: 37%;
+}
+
+.maintenance-detail{
+  background: #EFEFEF;
+  padding-bottom: 9rem;
+}
+
+/* 車検 */
+.maintenance-detail-vehicle-inspection{
+  text-align: center;
+  width: 90rem;
+  background: #fff;
+  border: 6px solid #d6101d;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.16));
+  border-radius: 1rem;
+  margin-bottom: 7.7rem;
+}
+.maintenance-detail-title-red{
+  background: #dc000c;
+  color: white;
+  padding: 2.2rem;
+}
+.maintenance-detail-title-red p:nth-child(1){
+  font-size: 2.6rem;
+  font-weight: 100;
+}
+.maintenance-detail-title-red p:nth-child(2){
+  font-size: 2rem;
+}
+.maintenance-detail-content-red{
+  padding: 2.3rem 3.2rem 5.4rem 3.2rem;
+}
+.maintenance-detail-free-service{
+  margin-bottom: 5.2rem;
+}
+.maintenance-detail-free-service p:nth-child(1){
+  font-weight: 100;
+  font-size: 1.8rem;
+  margin-bottom: 1.181rem;
+}
+.maintenance-detail-free-service p:nth-child(2){
+  background: #fde4e3;
+  font-size: 2.2rem;
+  font-weight: 100;
+  padding: 2.2rem 0;
+  position: relative;
+}
+.maintenance-detail-free-service p:nth-child(2)::after{
+  content: url('../image/after_maintenance_free_service_arrow.svg');
+  position: absolute;
+  bottom: -32px;
+  left: 48%;
+}
+.maintenance-detail-free-service-text{
+  font-weight: 100;
+  text-align: left;
+  font-size: 1.8rem;
+}
+.maintenance-detail-free-service-part{
+  display: flex;
+  padding: 0 8.05rem;
+  justify-content: space-evenly;
+  margin: 4rem 0 2.3rem 0;
+}
+.maintenance-detail-free-service-part img{
+  width: 17.8rem;
+  height: 17.8rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee div{
+  max-width: 82.4rem;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee div::-webkit-scrollbar {
+  width: 20px;
+}
+.maintenance-detail-free-vehicle-inspection-fee div::-webkit-scrollbar-track {
+  background-color: #DCDCDC;
+}
+.maintenance-detail-free-vehicle-inspection-fee div::-webkit-scrollbar-thumb {
+  border-left: 0;
+  border-right: 0;
+  background-color: #818181;
+  position: relative;
+}
+.maintenance-detail-free-vehicle-inspection-fee p:nth-child(1){
+  font-size: 2.4rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee p:nth-child(2){
+  background: #ffefd6;
+  font-size: 2rem;
+  margin: 1.9rem 0;
+  padding: 1.5rem 0;
+}
+.maintenance-detail-free-vehicle-inspection-fee table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: auto;
+  width: 105.9rem;
+}
+/* 基本車検料 */
+/* テーブル一行目 */
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(1){
+  color: white;
+  font-size: 2rem;
+  width: 16.5rem;
+  background: #FF783C;
+  font-weight: bold;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(1) th{
+  background: #EFEFEF;
+  width: 17.6rem;
+  border-right: 1px solid white;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(1) td{
+  width: 16.4rem;  
+  border-left: 1px solid white;
+  padding: 1.3rem 0;
+}
+/* テーブル二行目 */
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2){
+  font-weight: 100;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2) th{
+  color: white;
+  font-size: 2rem;
+  width: 16.5rem;
+  background: #1A1311;
+  font-weight: 100;
+  padding: 1.3rem 0;
+  font-weight: 100;
+  border-bottom: 1px solid white;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2) td:nth-child(4){
+  background: #FFEBE2;
+  border: 1px solid gray;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2) td{
+  border: 1px solid #767676;
+}
+/* テーブル三行目 */
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(3){
+  font-weight: 100;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(3) th{
+  color: white;
+  font-size: 2rem;
+  width: 16.5rem;
+  background: #1A1311;
+  font-weight: 100;
+  padding: 1.3rem 0;
+  font-weight: 100;
+  border-bottom: 1px solid white;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(3) td{
+  background: #FFEBE2;
+  border: 1px solid #767676;
+}
+
+/* テーブル四行目 */
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(4){
+  font-weight: 100;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(4) th{
+  color: white;
+  font-size: 2rem;
+  width: 16.5rem;
+  background: #1A1311;
+  font-weight: 100;
+  padding: 1.3rem 0;
+  font-weight: 100;
+  border-bottom: 1px solid white;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+    text-align: left;
+  padding-left: 1.2rem;
+}
+.maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(4) td{
+  border: 1px solid #767676;
+}
+/* 基本車検料 */
+
+/* 法定費用 */
+.maintenance-detail-legal-fee{
+  margin-top: 6.7rem;
+}
+.maintenance-detail-legal-fee p:nth-child(1){
+  font-size: 2.4rem;
+}
+.maintenance-detail-legal-fee p:nth-child(2){
+  background: #ffefd6;
+  font-size: 2rem;
+  margin: 1.9rem 0;
+  padding: 1.5rem 0;
+}
+.maintenance-detail-legal-fee div{
+  max-width: 82.4rem;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+.maintenance-detail-legal-fee div::-webkit-scrollbar {
+  width: 20px;
+}
+.maintenance-detail-legal-fee div::-webkit-scrollbar-track {
+  background-color: #DCDCDC;
+}
+.maintenance-detail-legal-fee div::-webkit-scrollbar-thumb {
+  border-left: 0;
+  border-right: 0;
+  background-color: #818181;
+  position: relative;
+}
+.maintenance-detail-legal-fee table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: auto;
+  width: 105.9rem;
+}
+/* 法定費用 */
+/* テーブル一行目 */
+.maintenance-detail-legal-fee table tr:nth-child(1) th{
+  background: #EFEFEF;
+  border-right: 1px solid white;
+  position: sticky;
+  left: 0;
+  height: 18.5rem;
+  z-index: 1;
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.maintenance-detail-legal-fee table tr:nth-child(1) td{
+  color: white;
+  font-size: 2rem;
+  background: #FF783C;
+  font-weight: bold;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 1.3rem 0;
+}
+/* テーブル二行目 */
+.maintenance-detail-legal-fee table tr:nth-child(2) th{
+  color: white;
+  font-size: 2rem;
+  background: #1A1311;
+  padding: 1.3rem 0;
+  height: 4.7rem;
+  font-weight: 100;
+  border-bottom: 1px solid white;
+  text-align: center;
+  border-right: 1px solid white;
+}
+.maintenance-detail-legal-fee table tr:nth-child(2) td{
+  color: white;
+  font-size: 2rem;
+  background: #1A1311;
+  padding: 1.3rem 0;
+  height: 4.7rem;
+  font-weight: 100;
+  border-bottom: 1px solid white;
+  text-align: center;
+  border-right: 1px solid white;
+}
+/* テーブル三行目 */
+.maintenance-detail-legal-fee table tr:nth-child(3) th{
+  background: #818181;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.maintenance-detail-legal-fee table tr:nth-child(3) td, .maintenance-detail-legal-fee table tr:nth-child(4) td{
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  background: #818181;
+  color: white;
+  font-weight: 100;
+  height: 4.7rem;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+/* テーブル四行目 */
+.maintenance-detail-legal-fee table tr:nth-child(4) th{
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  background: #818181;
+  color: white;
+  font-weight: 100;
+  height: 4.7rem;
+}
+/* テーブル五行目 */
+.maintenance-detail-legal-fee table tr:nth-child(5) td, .maintenance-detail-legal-fee table tr:nth-child(7) td{
+  text-align: right;
+  padding-right: 1.5rem;
+  border: 1px solid #767676;
+  font-weight: 100;
+}
+.maintenance-detail-legal-fee table tr:nth-child(5) td:nth-child(3){
+  text-align: center;
+}
+/* テーブル5~8行目 */
+.maintenance-detail-legal-fee table tr:nth-child(5) th,
+.maintenance-detail-legal-fee table tr:nth-child(6) th,
+.maintenance-detail-legal-fee table tr:nth-child(7) th,
+.maintenance-detail-legal-fee table tr:nth-child(8) th{
+  color: white;
+  padding: 0.8rem 0;
+  font-size: 2rem;
+  width: 16.5rem;
+  background: #1A1311;
+  font-weight: 100;
+  border-bottom: 1px solid white;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.maintenance-detail-legal-fee table tr:nth-child(6) td, .maintenance-detail-legal-fee table tr:nth-child(8) td{
+  text-align: right;
+  padding-right: 1.5rem;
+  border: 1px solid #767676;
+  border-bottom: 1px solid #767676;
+  font-weight: 100;
+  background: #FFEBE2;
+}
+/* 法定費用 */
+/* おすすめオプション */
+.maintenance-detail-option{
+  margin-top: 4.3rem;
+}
+.maintenance-detail-option-title{
+  font-size: 2.4rem;
+  border-bottom: 2px solid #707070;
+  padding-bottom: 2.2rem;
+}
+.maintenance-detail-option-text{
+  padding: 2.2rem 0;
+  font-size: 2rem;
+}
+.maintenance-detail-kinds-part{
+  display: flex;
+}
+.maintenance-detail-kinds-part p:nth-child(1){
+  width: 31.4%;
+  background: #ffebe2;
+  padding: 1.4rem 0;
+}
+.maintenance-detail-kinds-part p:nth-child(2){
+  width: 68.6%;
+  line-height: 5.2rem;
+  font-weight: 100;
+  font-size: 2rem;
+}
+.maintenance-detail-kinds-part:nth-child(1) p:nth-child(1){
+  border-top: 1px solid #707070;
+  border-right: 1px solid #707070;
+  border-left: 1px solid #707070;
+}
+.maintenance-detail-kinds-part:nth-child(1) p:nth-child(2){
+  border-right: 1px solid #707070;
+  border-top: 1px solid #707070;
+}
+.maintenance-detail-kinds-part:nth-child(2) p:nth-child(1){
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  border-left: 1px solid #707070;
+}
+.maintenance-detail-kinds-part:nth-child(2) p:nth-child(2){
+  border: 1px solid #707070;
+}
+/* 視界スッキリメニュー */
+.maintenance-detail-refreshing{
+  text-align: center;
+  width: 90rem;
+  background: #fff;
+  border: 6px solid #FE6E40;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.16));
+  border-radius: 1rem;
+  margin-bottom: 7.7rem;
+}
+.maintenance-detail-title-orange{
+  background: #FF783C;
+  color: white;
+  padding: 2.2rem;
+}
+.maintenance-detail-title-orange p{
+  font-size: 2.6rem;
+  font-weight: 100;
+}
+.maintenance-detail-refreshing-content{
+  padding: 2.3rem 3.2rem 5.4rem 3.2rem;
+}
+.maintenance-detail-refreshing-content2{
+  padding: 0.6rem 3.2rem 5.2rem 3.2rem;
+}
+.maintenance-detail-content-orange-title{
+  background: #ffefe7;
+  font-size: 2.4rem;
+  padding: 1.1rem 0;
+}
+.maintenance-detail-content-orange-text{
+  padding: 2.2rem 7.3rem 2.8rem 7.3rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+}
+.maintenance-detail-construction{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.maintenance-detail-construction-before, .maintenance-detail-construction-after{
+  width: 40.3rem;
+  height: 36.8rem;
+  position: relative;
+}
+.maintenance-detail-construction-before span{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #767676;
+  color: white;
+  font-size: 2rem;
+  padding: 0.7rem;
+  font-weight: 100;
+}
+.maintenance-detail-construction-after span{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #FF783C;
+  color: white;
+  font-size: 2rem;
+  padding: 0.7rem;
+  font-weight: 100;
+}
+.maintenance-detail-refresing-result{
+  border-bottom: 1px solid #707070;
+  padding-bottom: 4.6rem;
+}
+.maintenance-detail-refresing-result-part{
+  display: flex;
+  margin-bottom: 5.2rem;
+}
+.maintenance-detail-refresing-result-part:last-child{
+  margin: 0;
+}
+.maintenance-detail-refresing-result-part p:nth-of-type(1){
+  font-size: 2rem;
+  color: #26B7A1;
+  margin-right: 3rem;
+}
+.maintenance-detail-refresing-result-part p:nth-of-type(2){
+  font-size: 2rem;
+  text-align: left;
+}
+.maintenance-detail-refresing-price{
+  display: flex;
+  padding: 4rem 0rem 2.25rem 0rem;
+  width: 61.6rem;
+  margin: 0 auto;
+}
+.maintenance-detail-refresing-price p:nth-of-type(1){
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+.maintenance-detail-refresing-price p:nth-of-type(2){
+  font-size: 5rem;
+  line-height: 3.5rem;
+  text-align: right;
+  color: #dc000c;
+}
+.maintenance-detail-refresing-price span{
+  font-size: 2.4rem;
+}
+.maintenance-detail-refresing-coupon p{
+  background: #ffefd6;
+  padding: 1.4rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.maintenance-detail-refresing-coupon span{
+  color: #DC000C;
+  font-weight: bold;
+}
+.maintenance-detail-refresing-full-course .maintenance-detail-refresing-full-course-text{
+  font-size: 2rem;
+  margin-bottom: 1.7rem;
+  margin-top: 3.2rem;
+}
+.maintenance-detail-refresing-full-course span{
+  color: #DC000C;
+}
+.maintenance-detail-refresing-full-course a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  background: #26b7a1;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
+.maintenance-detail-refresing-full-course a::after{
+  content: url('../image/after_maintenance_arrow_emerald2.svg');
+  position: absolute;
+  right: 32%;
+}
+/* 車内リフレッシュ！メニュー */
+.maintenance-detail-refresh{
+  text-align: center;
+  width: 90rem;
+  background: #fff;
+  border: 6px solid #FE6E40;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.16));
+  border-radius: 1rem;
+  margin-bottom: 7.7rem;
+}
+.maintenance-detail-refresh-content{
+  padding: 2.3rem 3.2rem 2.7rem 3.2rem;
+}
+.maintenance-detail-refresh-content2{
+  padding: 0.6rem 3.2rem 4.3rem 3.2rem;
+}
+.maintenance-detail-refresh-content .maintenance-detail-content-orange-text, .maintenance-detail-refresh-content2 .maintenance-detail-content-orange-text{
+  padding: 2.2rem 7.3rem 2rem 7.3rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  line-height: 4rem;
+}
+.maintenance-detail-refresh-content .maintenance-detail-construction, .maintenance-detail-refresh-content2 .maintenance-detail-construction{
+  height: 38rem;
+  margin-bottom: 4.3rem;
+}
+.maintenance-detail-refresh-content .maintenance-detail-construction img, .maintenance-detail-refresh-content2 .maintenance-detail-construction img{
+  object-fit: cover;
+}
+
+.maintenance-detail-refresh-price{
+  display: flex;
+  padding: 3.3rem 0rem 1.8rem 0rem;
+  width: 61.6rem;
+  margin: 0 auto;
+}
+.maintenance-detail-refresh-price p:nth-of-type(1){
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+.maintenance-detail-refresh-price p:nth-of-type(2){
+  font-size: 5rem;
+  text-align: right;
+  color: #dc000c;
+}
+.maintenance-detail-refresh-content2 .maintenance-detail-refresh-price{
+  padding: 3.3rem 0rem 2.2rem 0rem;
+}
+.maintenance-detail-refresh-content2 .maintenance-detail-refresh-price p:nth-of-type(2){
+  line-height: 3rem;
+}
+.maintenance-detail-refresh-price span{
+  font-size: 2.4rem;
+}
+.maintenance-detail-notes{
+  margin-top: 2.2rem;
+  text-align: left;
+  font-weight: 100;
+}
+/* フルコース */
+.maintenance-detail-full-course{
+  text-align: center;
+  width: 90rem;
+  background: #fff;
+  border: 6px solid #26AD97;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.16));
+  border-radius: 1rem;
+  margin-bottom: 7.7rem;
+}
+.maintenance-detail-title-emerald{
+  background: #26b7a1;
+  color: white;
+  padding: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.maintenance-detail-title-emerald p{
+  font-size: 2.6rem;
+  font-weight: 100;
+}
+.maintenance-detail-full-course-content{
+  padding: 0 3.2rem 2rem 3.2rem;
+}
+.maintenance-detail-content-emerald-title{
+  background: #FFEBE2;
+  font-size: 2.4rem;
+  padding: 1.1rem 0;
+}
+.maintenance-detail-full-course-refreshing{
+  display: flex;
+  justify-content: space-between;
+}
+.maintenance-detail-full-course-part{
+  width: 40.3rem;
+  background: #fff;
+}
+.maintenance-detail-full-course-part p:nth-of-type(1){
+  font-size: 2rem;
+  border: 1px solid #26ad97;
+  padding: 1.2rem 0;
+  margin-top: 1.6rem;
+}
+.maintenance-detail-full-course-part p:nth-of-type(2){
+  color: #DC000C;
+  font-size: 3.5rem;
+  padding: 2.8rem 0 0rem 0;
+}
+.maintenance-detail-full-course-part span{
+  font-size: 2rem;
+}
+.maintenance-detail-full-course-line{
+  border: 3px solid #26ad97;
+  position: relative;
+  margin-top: 3.45rem;
+  margin-bottom: 3.95rem;
+}
+.maintenance-detail-full-course-line::before{
+  content: url(../image/full_course_line.svg);
+  position: absolute;
+  left: 45%;
+  z-index: 1;
+  width: 8.1rem;
+  background: white;
+  top: -23px;
+}
+
+.maintenance-detail-full-course-coupon{
+  display: flex;
+  padding: 3.7rem 6rem 3.6rem 6rem;
+  width: 68.6rem;
+  margin: 0 auto;
+  border-top: 1px solid #707070;
+  margin-top: 1.6rem;
+}
+.maintenance-detail-full-course-coupon p:nth-of-type(1){
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+.maintenance-detail-full-course-coupon p:nth-of-type(2){
+  line-height: 29px;
+  font-size: 5rem;
+  text-align: right;
+  color: #dc000c;
+}
+.maintenance-detail-full-bottom{
+  padding: 0 3.2rem;
+  margin-bottom: 5.2rem;
+}
+
+/* その他サービス */
+.maintenance-detail-others{
+  text-align: center;
+  width: 90rem;
+  background: #fff;
+  border: 6px solid #767676;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.16));
+  border-radius: 1rem;
+}
+.maintenance-detail-title-gray{
+  background: #818181;
+  color: white;
+  padding: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.maintenance-detail-title-gray p{
+  font-size: 2.6rem;
+  font-weight: 100;
+}
+.maintenance-detail-others-content{
+  padding: 0 3.2rem 4.3rem 3.2rem;
+}
+.maintenance-detail-others-content-part{
+  margin-bottom: 3.7rem;
+}
+.maintenance-detail-content-others-title{
+  background: #FFEBE2;
+  margin-bottom: 1.9rem;
+  font-size: 2.4rem;
+  padding: 0.7rem 0;
+}
+.maintenance-detail-content-others-text{
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-align: left;
+}
+.maintenance-detail-content-others-pay{
+  display: flex;
+  border: 1px solid #707070;
+}
+.maintenance-detail-content-others-pay-title{
+  background: #e3e2e2;
+  padding: 0 2.75rem;
+  line-height: 12.1rem;
+}
+.maintenance-detail-content-others-pay-text{
+  font-size: 1.8rem;
+  padding: 2rem 0 2rem 1.9rem;
+  font-weight: 100;
+  text-align: left;
 }
