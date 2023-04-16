@@ -26,7 +26,7 @@ ul {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1008px;
   padding: 0 62px;
 }
 @media (max-width: 1200px) {
@@ -39,7 +39,7 @@ ul {
 .container-660 {
   width: 100%;
   margin: 0 auto;
-  max-width: 660px;
+  max-width: 720px;
 }
 @media (max-width: 1000px) {
   .container-660 {
@@ -51,7 +51,7 @@ ul {
 .container-800 {
   width: 100%;
   margin: 0 auto;
-  max-width: 800px;/*ここを変える*/
+  max-width: 900px;/*ここを変える*/
 }
 @media (max-width: 1000px) {
   .container-800 {
@@ -88,7 +88,6 @@ a:hover {
   right: 6.6%;
   top: 30%;
 }
-
 .red{
   background: #DC000C;
 
@@ -103,6 +102,29 @@ a:hover {
   right: 0;
   top: -3rem;
   z-index: 1;
+}
+.common-span{
+  color: white;
+  display: block;
+  font-weight: 100;
+  text-align: center;
+  padding: 0.3rem 1.55rem;
+  margin-right: 1.2rem;
+}
+.common-form-label{
+  height: 3rem;
+  display: flex;
+  margin-bottom: 1.9rem;
+}
+.common-form-label label{
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+.required{
+  background: #DC000C;
+}
+.free{
+  background-color: #818181;
 }
 /* 共通パーツ */
 
@@ -238,10 +260,12 @@ header{
 
 /* トップページ */
 /* メインビジュアル */
-.main_visual {
+.main-visual {
+  max-width: 1440px;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
-.main_visual img {
+.main-visual img {
   width: 100%;
   height: 480px;
   object-fit: cover;
@@ -267,11 +291,11 @@ header{
   position: relative;
 }
 .business-used{
-  height: 82rem;
-  margin-bottom: 8rem;
+  width: 66rem;
+  margin-bottom: 9.3rem;
 }
 .business-maintenance{
-  height: 75.5rem;
+  width: 66rem;
   margin-bottom: 0rem;
 }
 .business-used h2, .business-maintenance h2{
@@ -280,11 +304,13 @@ header{
   margin-bottom: 3.2rem;
 }
 .business-used-box, .business-maintenance-box{
-  height: 68rem;
+  height: 78rem;
 }
 .business-used-box-top, .business-maintenance-box-top{
-  width: 66rem;
   height: 43rem;
+}
+.business-used-box-top img, .business-maintenance-box-top img{
+  height: 100%;
 }
 .business-used-box-bottom, .business-maintenance-box-bottom{
   border-bottom-right-radius: 10px;
@@ -295,6 +321,7 @@ header{
 }
 .business-used-box-bottom p, .business-maintenance-box-bottom p{
   font-size: 2rem;
+  line-height: 3.2rem;
 }
 /* 事業内容トップ */
 
@@ -313,7 +340,7 @@ header{
 .business-trouble-content{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .business-trouble-content-part{
   width: 24.2rem;
@@ -427,6 +454,8 @@ iframe{
 .slider {
   margin: 0 -1.3rem; /* 一枚一枚の間隔を13pxに設定 */
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .slider img {
   width: 100%;
@@ -481,7 +510,7 @@ iframe{
   margin: 0 auto;
   position: relative;
 }
-.common-title h1:nth-child(1){
+.common-title h1{
   font-family: Roboto;
   font-weight: 900;
   font-size: 16.8rem;
@@ -489,14 +518,18 @@ iframe{
   height: 11.7rem;
   line-height: 11.3rem;
 }
-.common-title h1:nth-child(2){
+.common-title h2{
   position: absolute;
   top: 30%;
   font-size: 3.2rem;
   left: 42%;
 }
-.pink h1:nth-child(1){
+.pink h1{
+
   color: #fee8e8;
+}
+.beige h1{
+  color: #ffe5d9;
 }
 .user-car-body{
   background: #fee8e8;
@@ -639,7 +672,7 @@ iframe{
   border-radius: 12px;
   background: #fff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
-  padding: 2.4rem 2.9rem 5.7rem 2.9rem;
+  padding: 2.4rem 2.4rem 5.7rem 2.4rem;
 }
 .detail-content h2{
   font-size: 2.6rem;
@@ -658,7 +691,7 @@ iframe{
   transform: unset !important;
 }
 .detail-thumbnail-img {
-  width: 6.6rem !important;
+  width: 6.5rem !important;
   height: 6.6rem !important;
   opacity: 0.3;
   transition: opacity .3s linear;
@@ -731,7 +764,7 @@ iframe{
   padding: 0 1.7rem 0 5rem;
 }
 .detail-contact-content-left{
-  margin-right: 3.2rem;
+  margin-right: 2.6rem;
   padding-top: 1.8rem;
 }
 .detail-contact-content-left p:nth-child(1){
@@ -745,3 +778,175 @@ iframe{
   width: 43rem;
 }
 /* 中古車販売詳細ページ */
+
+/* 問い合わせフォーム */
+.contact-container{
+  background: #ffe5d9;
+}
+.contact-content{
+  padding: 7.5rem 0 8.5rem 0;
+}
+
+form .contact-form-part{
+  padding-bottom: 1.8rem;
+  margin-bottom: 3.4rem;
+}
+form .contact-form-part:not(:first-child){
+  margin-top: 2.2rem;
+}
+form .contact-form-part:not(:last-child){
+  border-bottom: 2px solid #fff;
+}
+form .textarea{
+  border-bottom: none !important;
+  padding: 0;
+  margin: 0 0 5rem 0;
+}
+form .contact-form-part input{
+  width: 90rem;
+  height: 9rem;
+  background: #fff;
+  border: 1px solid #969696;
+  padding: 1rem;
+  font-size: 2rem;
+}
+form .contact-form-part textarea{
+  width: 90rem;
+  height: 67.2rem;
+  background: #fff;
+  border: 1px solid #969696;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.contact-privacy-policy{
+  width: 90rem;
+  height: 34.97rem;
+  overflow-y: scroll;
+  border: 1px solid;
+  padding: 2.6rem 2.1rem 5.4rem 2.7rem;
+  background-color: #fff;
+}
+.contact-privacy-policy{
+  width: 90rem;
+  height: 34.97rem;
+  overflow-y: scroll;
+  border: 1px solid;
+  padding: 2.6rem 2.1rem 5.4rem 2.7rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.contact-privacy-policy::-webkit-scrollbar {
+  width: 20px;
+}
+.contact-privacy-policy::-webkit-scrollbar-track {
+  background-color: #DCDCDC;
+}
+.contact-privacy-policy::-webkit-scrollbar-thumb {
+  border-left: 0;
+  border-right: 0;
+  background-color: #464646;
+  background-image: url('../image/scroll_arrow.svg'), url('../image/scroll_arrow2.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+  background-size: 1.4rem,  1.4rem;
+  position: relative;
+}
+.contact-privacy-policy p{
+  font-weight: 100;
+}
+.contact-privacy-policy p span{
+  font-weight: bold;
+}
+.contact-checkbox{
+  margin: 3.69rem 0 4.83rem 0;
+  text-align: center;
+  font-weight: 100;
+}
+/* お問い合わせ確認画面 */
+.contact-confirm-container{
+  background: #ffe5d9;
+  padding: 7.5rem 0 8.5rem 0;
+}
+.contact-confirm-part{
+  margin-bottom: 3.4rem;
+}
+.contact-confirm-part .textarea{
+  margin-bottom: 5.4rem ;
+}
+.contact-confirm-value{
+  border-bottom: 2px solid white;
+  font-weight: 100;
+  padding: 0.5rem 0 2.9rem 0;
+  font-size: 2rem;
+}
+.contact-confirm-btns{
+  text-align: center;
+  margin-top: 2rem;
+}
+.contact-confirm-btns button{
+  width: 168px;
+  height: 88px;
+  background: #818181;
+  border: 3px solid #fff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.16));
+  border-radius: 50px;
+  color: white;
+  margin-right: 4rem;
+  padding-left: 2rem;
+  position: relative;
+}
+.contact-confirm-btns button::before{
+  content: url('../image/slider_prev_arrow.svg') !important;
+  position: absolute;
+  top: 26%;
+  opacity: 1 !important;
+  transform: rotate(180deg);
+  left: 28%;
+}
+.contact-confirm-btns button[type=submit]{
+  width: 168px;
+  height: 88px;
+  background: #dc000c;
+  border: 3px solid #fff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.16));
+  color: white;
+  border-radius: 50px;
+  position: relative;
+  padding-right: 3rem;
+}
+.contact-confirm-btns button[type=submit]::before{
+  content: url('../image/slider_next_arrow.svg') !important;
+  position: absolute;
+  top: 35%;
+  opacity: 1 !important;
+  transform: rotate(360deg);
+  right: -15px;
+}
+/* お問い合わせエントリー画面 */
+.contact-entry-container{
+  background: #ffe5d9;
+  padding: 7.88rem 0 7.4rem 0;
+  text-align: center;
+}
+.contact-entry-content p:nth-child(1){
+  font-size: 2.6rem;
+}
+.contact-entry-content p:nth-child(2){
+  font-weight: 100;
+  line-height: 3.8rem;
+  margin: 2.9rem 0 4.4rem 0;
+}
+.contact-entry-content a{
+  width: 53.3rem;
+  height: 8.8rem;
+  background: #dc000c;
+  border: 3px solid #fff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.16));
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  font-size: 2.2rem;
+  line-height: 8.8rem;
+}
