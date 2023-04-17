@@ -61,6 +61,11 @@ ul {
 }
 
 /* 共通パーツ */
+.slide-in {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1.5s, transform 1.5s;
+}
 a:hover {
   opacity: 0.6;
 }

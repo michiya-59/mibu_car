@@ -1,29 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const backToTopButton = document.getElementById("back-to-top");
-
-  backToTopButton.addEventListener("click", function() {
-    smoothScrollToTop();
-  });
-});
-
-function smoothScrollToTop() {
-  const startPosition = window.pageYOffset;
+function scrollToTop(duration) {
+  const start = window.scrollY;
+  const end = 0;
   const startTime = performance.now();
 
-  function scroll(currentTime) {
+  function animateScroll(currentTime) {
     const elapsedTime = currentTime - startTime;
-    const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-    const easingFactor = easeInOutQuad(elapsedTime / 1000);
-    const targetPosition = startPosition - startPosition * easingFactor;
+    const progress = elapsedTime / duration;
 
-    window.scrollTo(0, targetPosition);
+    window.scrollTo(0, start + (end - start) * progress);
 
-    if (targetPosition > 0.5) {
-      requestAnimationFrame(scroll);
-    } else {
-      window.scrollTo(0, 0);
+    if (elapsedTime < duration) {
+      requestAnimationFrame(animateScroll);
     }
   }
 
-  requestAnimationFrame(scroll);
+  requestAnimationFrame(animateScroll);
 }
+
+document.querySelector('#back-to-top').addEventListener('click', () => {
+  scrollToTop(500);
+});
