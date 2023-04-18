@@ -5,6 +5,14 @@ $(function () {
     centerMode: true,
     slidesToShow: 2.33, //表示するスライドの数
     arrows: true, //矢印非表示
+    responsive: [
+      {
+        breakpoint: 769, // タブレットの場合のブレークポイント
+        settings: {
+          slidesToShow: 1, // 1度に表示するスライド数を3に変更
+        }
+      },
+    ]
   });
 });
 

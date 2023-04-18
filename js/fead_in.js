@@ -1,24 +1,17 @@
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= windowHeight &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+$(document).ready(function () {
+  function checkVisibleElements() {
+    $(".slide-up").each(function () {
+      const elementTop = $(this).offset().top;
+      const elementBottom = elementTop + $(this).outerHeight();
+      const viewportTop = $(window).scrollTop();
+      const viewportBottom = viewportTop + $(window).height();
 
-function slideIn() {
-  const slideInElements = document.querySelectorAll('.slide-in');
+      if (elementBottom > viewportTop && elementTop < viewportBottom) {
+        $(this).addClass("visible");
+      }
+    });
+  }
 
-  slideInElements.forEach(element => {
-    if (isElementInViewport(element)) {
-      element.style.opacity = 1;
-      element.style.transform = 'translateY(0)';
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', slideIn);
-window.addEventListener('scroll', slideIn);
+  checkVisibleElements(); // 初期表示時にチェック
+  $(window).on("scroll", checkVisibleElements); // スクロール時にチェック
+});
