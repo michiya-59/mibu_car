@@ -1,8 +1,6 @@
 @charset "UTF-8";
 html {
   font-size: 62.5%; /* 1rem → 10px */
-  font-family: "Noto Sans JP";
-  font-weight: 700;
 }
 @media (max-width: 960px) {
   html {
@@ -11,6 +9,8 @@ html {
 }
 body {
   font-size: 1.6rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
 }
 main{
   overflow: hidden;
@@ -21,6 +21,9 @@ img {
 }
 ul {
   list-style: none ;
+}
+a:hover{
+  opacity: 0.6;
 }
 /*横幅900のひろいやつ*/
 .container {
@@ -39,7 +42,7 @@ ul {
 .container-660 {
   width: 100%;
   margin: 0 auto;
-  max-width: 72rem;
+  max-width: 66rem;
 }
 @media (max-width: 1000px) {
   .container-660 {
@@ -61,25 +64,27 @@ ul {
 }
 
 /* 共通パーツ */
-.slide-in {
+.slide-up {
   opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 1.5s, transform 1.5s;
+  transform: translateY(100px);
+  transition: opacity 2.5s, transform 2.5s;
+  will-change: opacity, transform;
 }
-a:hover {
-  opacity: 0.6;
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
-.common-btn{
+
+.common-btn {
   font-size: 2.6rem;
   text-align: center;
   color: white;
-  display: block;
+  display: inline-block;
   width: 50rem;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 700;
   padding: 2rem 0;
-  margin: 0 auto;
-  margin-top: 3.2rem;
   border-radius: 50px;
   border: 3px solid white;
   position: relative;
@@ -92,24 +97,27 @@ a:hover {
   right: 6.6%;
   top: 30%;
 }
-.red{
+.common-btn:hover{
+  opacity: 0.6;
+}
+.common-btn.red {
   background: #DC000C;
 }
-.orange{
+.common-btn.orange {
   background: #FF783C;
 }
 .commont-top-btn{
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 8.5rem;
+  height: 8.5rem;
   position: absolute;
   right: 0;
-  top: -3rem;
+  top: -3.5rem;
   z-index: 1;
 }
 .common-span{
   color: white;
   display: block;
-  font-weight: 100;
+  font-weight: 700;
   text-align: center;
   padding: 0.3rem 1.55rem;
   margin-right: 1.2rem;
@@ -122,6 +130,7 @@ a:hover {
 .common-form-label label{
   font-size: 2.2rem;
   line-height: 3rem;
+  font-weight: 700;
 }
 .required{
   background: #DC000C;
@@ -132,34 +141,32 @@ a:hover {
 .common-title{
   position: relative;
 }
-.common-title h1{
+.common-title-design{
   font-family: Roboto;
   font-weight: 900;
   font-size: 16.8rem;
   text-align: center;
   height: 11.7rem;
-  line-height: 11.3rem;
+  line-height: 12.3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
 }
-.common-title h2{
+.common-title-headline{
   position: absolute;
-  top: 30%;
   font-size: 3.2rem;
-  left: 42%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.pink h1{
+.pink .common-title-design{
   color: #fee8e8;
 }
-.beige h1{
+.beige .common-title-design{
   color: #ffe5d9;
 }
-.gray h1{
+.gray .common-title-design{
   color: #EFEFEF;
-}
-.gray h2{
-  left: 40%;
 }
 /* 共通パーツ */
 
@@ -173,7 +180,7 @@ header{
 .header {
   display: flex;
   align-items: center;
-  max-width: 115.2rem;
+  max-width: 102.4rem;
   height: 9.5rem;
   margin: 0 auto;
 }
@@ -203,6 +210,11 @@ header{
   color: #1A1311;
   font-weight: bold;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+.header .header-right ul li a:hover {
+  color: #DC000C;
+  opacity: 1;
 }
 .header .header-right .header-info {
   background: #1A1311;
@@ -214,10 +226,16 @@ header{
   font-size: 2rem;
   line-height: 2.3rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.header .header-right .header-info p:nth-child(1) a{
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
 }
 .header .header-right .header-info p:nth-child(2) {
   font-size: 1.4rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: right;
   line-height: 1.7rem;
 }
@@ -256,8 +274,33 @@ header{
 .footer-top-contact-left p{
   padding-left: 2rem;
   font-size: 1.8rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
+}
+.footer-contact-btn{
+  border-radius: 5rem;
+  display: block;
+  border: 3px solid #fff;
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.16));
+  width: 43rem;
+  height: 8.8rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  padding: 2.7rem 4.97rem 0 11rem;
+  position: relative;
+}
+.footer-contact-btn::after{
+  content: url('../image/footer_icon.svg');
+  position: absolute;
+  width: 3.7rem;
+  height: 3.7rem;
+  left: 52px;
+}
+.footer-contact-btn.orange{
+  background: #FF783C;
 }
 .footer-top-contact a{
   margin-left: 4.1rem;
@@ -276,12 +319,13 @@ header{
   width: 28.9rem;
   height: auto;
 }
-.footer-bottom-content-left h2{
+.footer-bottom-tel{
+  font-weight: 700;
   font-size: 2.5rem;
 }
-.footer-bottom-content-left p{
+.footer-bottom-address{
   font-size: 1.3rem;
-  font-weight: 100;
+  font-weight: 500;
 }
 .footer-bottom-content-right{
   display: flex;
@@ -291,20 +335,26 @@ header{
 .footer-bottom-content-right li a{
   color: white;
   text-decoration: none;
+  font-weight: 700;
 }
 /* フッター */
 
 /* トップページ */
 /* メインビジュアル */
 .main-visual {
-  max-width: 144rem;
+  max-width: 192rem;
   margin: 0 auto;
   margin-bottom: 5rem;
 }
 .main-visual img {
   width: 100%;
-  height: 48rem;
-  object-fit: cover;
+  height: auto;
+}
+@media (max-width:960px) {
+  .main-visual img {
+    height: 45vw;
+    object-fit: cover;
+  }
 }
 /* メインビジュアル */
 
@@ -316,6 +366,11 @@ header{
   font-size: 3rem;
   text-align: center;
   line-height: 4.6rem;
+  font-weight: 700;
+}
+.about-buttonarea {
+  text-align: center;
+  margin-top: 3.2rem;
 }
 /* 会社案内トップ */
 
@@ -327,14 +382,10 @@ header{
   position: relative;
 }
 .business-used{
-  width: 66rem;
   margin-bottom: 9.3rem;
 }
-.business-maintenance{
-  width: 66rem;
-  margin-bottom: 0rem;
-}
-.business-used h2, .business-maintenance h2{
+.business-used h2,
+.business-maintenance h2{
   font-size: 3.2rem;
   color: white;
   margin-bottom: 3.2rem;
@@ -358,6 +409,10 @@ header{
 .business-used-box-bottom p, .business-maintenance-box-bottom p{
   font-size: 2rem;
   line-height: 3.2rem;
+  font-weight: 700;
+}
+.business-buttonarea{
+  margin-top: 2.7rem;
 }
 /* 事業内容トップ */
 
@@ -370,7 +425,7 @@ header{
   text-align: center;
   color: white;
   font-size: 3.2rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 8.1rem;
 }
 .business-trouble-content{
@@ -407,7 +462,7 @@ header{
   text-align: center;
   font-size: 2rem;
   color: white;
-  font-weight: 100;
+  font-weight: 400;
 }
 /* お悩み内容 */
 
@@ -431,13 +486,13 @@ header{
   font-size: 2.5rem;
   background: linear-gradient(to bottom right, #DC010B 50%, #CC0105 50%);
   color: white;
-  font-weight: 100;
+  font-weight: 400;
   border-radius: 50%;
   line-height: 17.8rem;
 }
 .company-text{
   font-size: 2.0rem;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 3.8rem;
 }
 .company-slider{
@@ -452,9 +507,9 @@ header{
   display: flex;
   border-bottom: 1px solid #767676;
   text-align: left;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.8rem;
-  padding: 2rem 0;
+  padding: 3.7rem 0;
   position: relative;
 }
 .company-info-part::before{
@@ -488,15 +543,19 @@ iframe{
 
 /* スライダー */
 .slider {
-  margin: 0 -1.3rem; /* 一枚一枚の間隔を13pxに設定 */
   overflow: hidden;
-  max-width: 144rem;
+  max-width: 192rem;
   margin: 0 auto;
 }
-.slider img {
-  width: 100%;
-  height: 100%;
-  margin: 0 -1.3rem;
+.slider-image {
+  margin: 0 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.slider-image img{
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 /* スライダー */
 
@@ -504,7 +563,7 @@ iframe{
 .slick-prev{
   position: absolute !important;
   z-index: 2 !important;
-  left: 27% !important;
+  left: 28% !important;
   background: #000000 !important;
   border: 3px solid #fff !important;
   border-radius: 50% !important;
@@ -522,7 +581,7 @@ iframe{
 .slick-next{
   position: absolute !important;
   z-index: 2 !important;
-  right: 28.5% !important;
+  right: 27.5% !important;
   background: #000000 !important;
   border: 3px solid #fff !important;
   border-radius: 50% !important;
@@ -550,6 +609,7 @@ iframe{
 .user-car-text{
   font-size: 1.8rem;
   margin-bottom: 6rem;
+  font-weight: 700;
 }
 .user-car-lists{
   
@@ -563,7 +623,7 @@ iframe{
 .user-car-lists-part:not(:first-child){
   margin-top: 4.5rem;
 }
-.user-car-lists-part h2{
+.user-car-title{
   font-size: 2.6rem;
   border-bottom: 1px solid #1914122b;
   padding-bottom: 1.65rem;
@@ -583,10 +643,11 @@ iframe{
   padding-bottom: 1.35rem;
   margin-bottom: 1.5rem;
 }
-.common-pay-amounts p:nth-child(1){
+.common-pay-amounts-text{
   font-size: 1.8rem;
+  font-weight: 700;
 }
-.common-pay-amounts p:nth-child(2){
+.common-pay-amounts-price{
   font-weight: bold;
   font-size: 3.2rem;
   line-height: 3.8rem;
@@ -595,14 +656,14 @@ iframe{
 }
 .user-car-options{
   font-size: 1.6rem;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 2.8rem;
 }
 .user-car-lists-part-bottom{
   width: 51rem;
 }
 .user-car-lists-part-bottom ul{
-  font-weight: 100;
+  font-weight: 400;
   display: flex;
   flex-wrap: wrap;
 }
@@ -618,6 +679,10 @@ iframe{
   line-height: 2.8rem;
   font-weight: bold;
   padding: 0 1rem;
+}
+.user-car-buttonarea{
+  margin-top: 3.4rem;
+  text-align: center;
 }
 /* 中古車内容 */
 
@@ -645,7 +710,7 @@ iframe{
   padding: 2.75rem 0;
   text-decoration: none;
   color: black;
-  font-weight: 100;
+  font-weight: 400;
   position: relative;
 }
 .search-maker ul a::after, .search-body-type ul a::after{
@@ -660,15 +725,17 @@ iframe{
 .new-car-sales{
   margin-bottom: 8.5rem;
 }
-.new-car-sales p:nth-child(1){
+.new-car-title{
   background: #fcdedd;
   padding: 1.35rem 0 1.35rem 2.6rem;
-  margin: 7rem 0 2.2rem 0;
+  margin: 7rem 0 1.3rem 0;
   font-size: 2.2rem;
+  font-weight: 700;
 }
-.new-car-sales p:nth-child(2){
-  font-weight: 100;
+.new-car-text{
+  font-weight: 400;
   font-size: 1.8rem;
+  line-height: 3.8rem;
 }
 /* 新車販売テキスト */
 
@@ -683,7 +750,7 @@ iframe{
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
   padding: 2.4rem 2.4rem 5.7rem 2.4rem;
 }
-.detail-content h2{
+.detail-userd-title{
   font-size: 2.6rem;
   border-bottom: 1px solid #1914122b;
   padding-bottom: 1.65rem;
@@ -698,6 +765,9 @@ iframe{
 }
 .detail-thumbnail .slick-track {
   transform: unset !important;
+}
+.slick-track{
+  margin-bottom: 2.38rem;
 }
 .detail-thumbnail-img {
   width: 6.5rem !important;
@@ -723,6 +793,7 @@ iframe{
   font-size: 2.2rem;
   color: #e64442;
   margin-bottom: 2.4rem;
+  font-weight: 700;
 }
 .detail-data-table{
   border-collapse: collapse;
@@ -737,29 +808,33 @@ iframe{
   border: 1px solid #000;
 }
 .detail-tr td{
+  font-size: 2rem;
   width: 24.7rem;
   border: 1px solid #000;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.8rem;
   padding-left: 1.3rem;
 }
 .detail-equipment{
   font-size: 2.2rem;
   margin-top: 3.15rem;
+  border-bottom: 1px solid #1914122b;
+  padding-bottom: 1.75rem;
 }
 .detail-equipment-lists{
   font-size: 1.8rem;
-  font-weight: 100;
+  font-weight: 400;
   padding: 1.9rem 0;
 }
 .detail-notices{
   font-size: 2.2rem;
   border-top: 1px solid #1914122b;
+  border-bottom: 1px solid #1914122b;
   padding: 3.05rem 0 1.75rem 0;
 }
 .detail-notices-text{
   font-size: 1.8rem;
-  font-weight: 100;
+  font-weight: 400;
   padding: 1.9rem 0;
   border-bottom: 1px solid #1914122b;
 }
@@ -776,11 +851,12 @@ iframe{
   margin-right: 2.6rem;
   padding-top: 1.8rem;
 }
-.detail-contact-content-left p:nth-child(1){
+.detail-contact-tel{
   font-size: 3.27rem;
+  font-weight: 700;
 }
-.detail-contact-content-left p:nth-child(2){
-  font-weight: 100;
+.detail-contact-sales{
+  font-weight: 400;
   text-align: center;
 }
 .detail-contact-content a img{
@@ -813,7 +889,7 @@ form .textarea{
 }
 form .contact-form-part input{
   width: 90rem;
-  height: 9rem;
+  height: 6rem;
   background: #fff;
   border: 1px solid #969696;
   padding: 1rem;
@@ -845,24 +921,8 @@ form .contact-form-part textarea{
   position: relative;
 }
 
-.contact-privacy-policy::-webkit-scrollbar {
-  width: 2rem;
-}
-.contact-privacy-policy::-webkit-scrollbar-track {
-  background-color: #DCDCDC;
-}
-.contact-privacy-policy::-webkit-scrollbar-thumb {
-  border-left: 0;
-  border-right: 0;
-  background-color: #464646;
-  background-image: url('../image/scroll_arrow.svg'), url('../image/scroll_arrow2.svg');
-  background-repeat: no-repeat, no-repeat;
-  background-position: top, bottom;
-  background-size: 1.4rem,  1.4rem;
-  position: relative;
-}
 .contact-privacy-policy p{
-  font-weight: 100;
+  font-weight: 400;
 }
 .contact-privacy-policy p span{
   font-weight: bold;
@@ -870,7 +930,10 @@ form .contact-form-part textarea{
 .contact-checkbox{
   margin: 3.69rem 0 4.83rem 0;
   text-align: center;
-  font-weight: 100;
+  font-weight: 400;
+}
+.contact-buttonarea{
+  text-align: center;
 }
 /* お問い合わせ確認画面 */
 .contact-confirm-container{
@@ -885,7 +948,7 @@ form .contact-form-part textarea{
 }
 .contact-confirm-value{
   border-bottom: 2px solid white;
-  font-weight: 100;
+  font-weight: 400;
   padding: 0.5rem 0 2.9rem 0;
   font-size: 2rem;
 }
@@ -893,7 +956,7 @@ form .contact-form-part textarea{
   text-align: center;
   margin-top: 2rem;
 }
-.contact-confirm-btns button{
+.contact-confirm-back{
   width: 16.8rem;
   height: 8.8rem;
   background: #818181;
@@ -904,16 +967,18 @@ form .contact-form-part textarea{
   margin-right: 4rem;
   padding-left: 2rem;
   position: relative;
+  font-weight: 700;
+  font-size: 2.2rem;
 }
-.contact-confirm-btns button::before{
+.contact-confirm-back::before{
   content: url('../image/slider_prev_arrow.svg') !important;
   position: absolute;
   top: 26%;
   opacity: 1 !important;
   transform: rotate(180deg);
-  left: 28%;
+  left: 24%;
 }
-.contact-confirm-btns button[type=submit]{
+.contact-confirm-entry{
   width: 16.8rem;
   height: 8.8rem;
   background: #dc000c;
@@ -922,15 +987,17 @@ form .contact-form-part textarea{
   color: white;
   border-radius: 50px;
   position: relative;
-  padding-right: 3rem;
+  padding-right: 2rem;
+  font-weight: 700;
+  font-size: 2.2rem;
 }
-.contact-confirm-btns button[type=submit]::before{
+.contact-confirm-entry::before{
   content: url('../image/slider_next_arrow.svg') !important;
   position: absolute;
   top: 35%;
   opacity: 1 !important;
   transform: rotate(360deg);
-  right: -1.5rem;
+  right: 4rem;
 }
 /* お問い合わせエントリー画面 */
 .contact-entry-container{
@@ -938,15 +1005,16 @@ form .contact-form-part textarea{
   padding: 7.88rem 0 7.4rem 0;
   text-align: center;
 }
-.contact-entry-content p:nth-child(1){
+.contact-entry-title{
   font-size: 2.6rem;
+  font-weight: 700;
 }
-.contact-entry-content p:nth-child(2){
-  font-weight: 100;
+.contact-entry-text{
+  font-weight: 400;
   line-height: 3.8rem;
   margin: 2.9rem 0 4.4rem 0;
 }
-.contact-entry-content a{
+.contact-entry-buttonarea a{
   width: 53.3rem;
   height: 8.8rem;
   background: #dc000c;
@@ -955,6 +1023,7 @@ form .contact-form-part textarea{
   display: inline-block;
   text-decoration: none;
   color: white;
+  font-weight: 700;
   border-radius: 50px;
   font-size: 2.2rem;
   line-height: 8.8rem;
@@ -977,7 +1046,6 @@ form .contact-form-part textarea{
   height: 51.7rem;
 }
 .maintenance-menu-lists a{
-  width: 90rem;
   height: 10rem;
   border-radius: 12px;
   background: #fff;
@@ -986,6 +1054,7 @@ form .contact-form-part textarea{
   font-size: 2.4rem;
   line-height: 9rem;
   margin-bottom: 3.3rem;
+  font-weight: 700;
 }
 .maintenance-menu-list-block{
   display: flex;
@@ -1036,10 +1105,10 @@ form .contact-form-part textarea{
   white-space: pre;
   width: 12.9rem;
   height: 12.9rem;
-  background-color: #DC000C;
+  background: linear-gradient(to bottom right, #DC010B 50%, #CC0105 50%);
   border-radius: 50%;
   color: white;
-  font-weight: 100;
+  font-weight: 400;
   top: -2.1rem;
   left: -2.6rem;
   line-height: 2.8rem;
@@ -1082,11 +1151,11 @@ form .contact-form-part textarea{
   color: white;
   padding: 2.2rem;
 }
-.maintenance-detail-title-red p:nth-child(1){
+.maintenance-detail-title{
   font-size: 2.6rem;
-  font-weight: 100;
+  font-weight: 400;
 }
-.maintenance-detail-title-red p:nth-child(2){
+.maintenance-detail-text{
   font-size: 2rem;
 }
 .maintenance-detail-content-red{
@@ -1095,26 +1164,31 @@ form .contact-form-part textarea{
 .maintenance-detail-free-service{
   margin-bottom: 5.2rem;
 }
-.maintenance-detail-free-service p:nth-child(1){
-  font-weight: 100;
+.maintenance-service-price{
+  font-weight: 400;
   font-size: 1.8rem;
   margin-bottom: 1.181rem;
 }
-.maintenance-detail-free-service p:nth-child(2){
+.maintenance-free-text{
   background: #fde4e3;
   font-size: 2.2rem;
-  font-weight: 100;
+  font-weight: 400;
   padding: 2.2rem 0;
   position: relative;
 }
-.maintenance-detail-free-service p:nth-child(2)::after{
-  content: url('../image/after_maintenance_free_service_arrow.svg');
+.maintenance-free-text::after{
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 31px 16.5px 0 16.5px;
+  border-color: #fde4e3 transparent transparent transparent;
   position: absolute;
-  bottom: -3.2rem;
+  bottom: -2.2rem;
   left: 48%;
 }
 .maintenance-detail-free-service-text{
-  font-weight: 100;
+  font-weight: 400;
   text-align: left;
   font-size: 1.8rem;
 }
@@ -1130,34 +1204,23 @@ form .contact-form-part textarea{
 }
 .maintenance-detail-free-vehicle-inspection-fee div{
   max-width: 82.4rem;
-  overflow: auto;
+  overflow-x: scroll;
   padding-bottom: 2rem;
 }
-.maintenance-detail-free-vehicle-inspection-fee div::-webkit-scrollbar {
-  width: 2rem;
-}
-.maintenance-detail-free-vehicle-inspection-fee div::-webkit-scrollbar-track {
-  background-color: #DCDCDC;
-}
-.maintenance-detail-free-vehicle-inspection-fee div::-webkit-scrollbar-thumb {
-  border-left: 0;
-  border-right: 0;
-  background-color: #818181;
-  position: relative;
-}
-.maintenance-detail-free-vehicle-inspection-fee p:nth-child(1){
+.maintenance-fee-text{
   font-size: 2.4rem;
+  font-weight: 700;
 }
-.maintenance-detail-free-vehicle-inspection-fee p:nth-child(2){
+.maintenance-instruction{
   background: #ffefd6;
   font-size: 2rem;
   margin: 1.9rem 0;
   padding: 1.5rem 0;
+  font-weight: 700;
 }
 .maintenance-detail-free-vehicle-inspection-fee table{
   border-collapse: collapse;
   border-spacing: 0;
-  overflow: auto;
   width: 105.9rem;
 }
 /* 基本車検料 */
@@ -1170,6 +1233,7 @@ form .contact-form-part textarea{
   font-weight: bold;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(1) th{
+  font-weight: 500;
   background: #EFEFEF;
   width: 17.6rem;
   border-right: 1px solid white;
@@ -1180,22 +1244,23 @@ form .contact-form-part textarea{
   padding-left: 1.2rem;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(1) td{
+  font-size: 2rem;
   width: 16.4rem;  
   border-left: 1px solid white;
   padding: 1.3rem 0;
 }
 /* テーブル二行目 */
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2){
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2) th{
+  font-weight: 500;
   color: white;
   font-size: 2rem;
   width: 16.5rem;
   background: #1A1311;
-  font-weight: 100;
+  font-weight: 400;
   padding: 1.3rem 0;
-  font-weight: 100;
   border-bottom: 1px solid white;
   position: sticky;
   left: 0;
@@ -1204,24 +1269,26 @@ form .contact-form-part textarea{
   padding-left: 1.2rem;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2) td:nth-child(4){
+  font-size: 2rem;
   background: #FFEBE2;
   border: 1px solid gray;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(2) td{
+  font-size: 2rem;
   border: 1px solid #767676;
 }
 /* テーブル三行目 */
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(3){
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(3) th{
   color: white;
   font-size: 2rem;
   width: 16.5rem;
   background: #1A1311;
-  font-weight: 100;
+  font-weight: 400;
   padding: 1.3rem 0;
-  font-weight: 100;
+  font-weight: 500;
   border-bottom: 1px solid white;
   position: sticky;
   left: 0;
@@ -1230,22 +1297,23 @@ form .contact-form-part textarea{
   padding-left: 1.2rem;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(3) td{
+  font-size: 2rem;
   background: #FFEBE2;
   border: 1px solid #767676;
 }
 
 /* テーブル四行目 */
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(4){
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(4) th{
   color: white;
   font-size: 2rem;
   width: 16.5rem;
   background: #1A1311;
-  font-weight: 100;
+  font-weight: 400;
   padding: 1.3rem 0;
-  font-weight: 100;
+  font-weight: 500;
   border-bottom: 1px solid white;
   position: sticky;
   left: 0;
@@ -1254,6 +1322,7 @@ form .contact-form-part textarea{
   padding-left: 1.2rem;
 }
 .maintenance-detail-free-vehicle-inspection-fee table tr:nth-child(4) td{
+  font-size: 2rem;
   border: 1px solid #767676;
 }
 /* 基本車検料 */
@@ -1262,36 +1331,25 @@ form .contact-form-part textarea{
 .maintenance-detail-legal-fee{
   margin-top: 6.7rem;
 }
-.maintenance-detail-legal-fee p:nth-child(1){
+.maintenance-legal-fee-text{
   font-size: 2.4rem;
+  font-weight: 700;
 }
-.maintenance-detail-legal-fee p:nth-child(2){
+.maintenance-legal-fee-instruction{
   background: #ffefd6;
   font-size: 2rem;
   margin: 1.9rem 0;
   padding: 1.5rem 0;
+  font-weight: 700;
 }
 .maintenance-detail-legal-fee div{
   max-width: 82.4rem;
-  overflow: auto;
+  overflow-x: scroll;
   padding-bottom: 2rem;
-}
-.maintenance-detail-legal-fee div::-webkit-scrollbar {
-  width: 2rem;
-}
-.maintenance-detail-legal-fee div::-webkit-scrollbar-track {
-  background-color: #DCDCDC;
-}
-.maintenance-detail-legal-fee div::-webkit-scrollbar-thumb {
-  border-left: 0;
-  border-right: 0;
-  background-color: #818181;
-  position: relative;
 }
 .maintenance-detail-legal-fee table{
   border-collapse: collapse;
   border-spacing: 0;
-  overflow: auto;
   width: 105.9rem;
 }
 /* 法定費用 */
@@ -1305,8 +1363,10 @@ form .contact-form-part textarea{
   z-index: 1;
   text-align: left;
   padding-left: 1.2rem;
+  font-weight: 500;
 }
 .maintenance-detail-legal-fee table tr:nth-child(1) td{
+  font-size: 2rem;
   color: white;
   font-size: 2rem;
   background: #FF783C;
@@ -1322,18 +1382,19 @@ form .contact-form-part textarea{
   background: #1A1311;
   padding: 1.3rem 0;
   height: 4.7rem;
-  font-weight: 100;
+  font-weight: 500;
   border-bottom: 1px solid white;
   text-align: center;
   border-right: 1px solid white;
 }
 .maintenance-detail-legal-fee table tr:nth-child(2) td{
+  font-size: 2rem;
   color: white;
   font-size: 2rem;
   background: #1A1311;
   padding: 1.3rem 0;
   height: 4.7rem;
-  font-weight: 100;
+  font-weight: 400;
   border-bottom: 1px solid white;
   text-align: center;
   border-right: 1px solid white;
@@ -1343,13 +1404,15 @@ form .contact-form-part textarea{
   background: #818181;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
+  font-weight: 500;
 }
 .maintenance-detail-legal-fee table tr:nth-child(3) td, .maintenance-detail-legal-fee table tr:nth-child(4) td{
+  font-size: 2rem;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   background: #818181;
   color: white;
-  font-weight: 100;
+  font-weight: 400;
   height: 4.7rem;
   text-align: right;
   padding-right: 1.5rem;
@@ -1360,17 +1423,19 @@ form .contact-form-part textarea{
   border-bottom: 1px solid white;
   background: #818181;
   color: white;
-  font-weight: 100;
+  font-weight: 500;
   height: 4.7rem;
 }
 /* テーブル五行目 */
 .maintenance-detail-legal-fee table tr:nth-child(5) td, .maintenance-detail-legal-fee table tr:nth-child(7) td{
+  font-size: 2rem;
   text-align: right;
   padding-right: 1.5rem;
   border: 1px solid #767676;
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-legal-fee table tr:nth-child(5) td:nth-child(3){
+  font-size: 2rem;
   text-align: center;
 }
 /* テーブル5~8行目 */
@@ -1383,7 +1448,7 @@ form .contact-form-part textarea{
   font-size: 2rem;
   width: 16.5rem;
   background: #1A1311;
-  font-weight: 100;
+  font-weight: 500;
   border-bottom: 1px solid white;
   position: sticky;
   left: 0;
@@ -1392,11 +1457,12 @@ form .contact-form-part textarea{
   padding-left: 1.2rem;
 }
 .maintenance-detail-legal-fee table tr:nth-child(6) td, .maintenance-detail-legal-fee table tr:nth-child(8) td{
+  font-size: 2rem;
   text-align: right;
   padding-right: 1.5rem;
   border: 1px solid #767676;
   border-bottom: 1px solid #767676;
-  font-weight: 100;
+  font-weight: 400;
   background: #FFEBE2;
 }
 /* 法定費用 */
@@ -1408,23 +1474,26 @@ form .contact-form-part textarea{
   font-size: 2.4rem;
   border-bottom: 2px solid #707070;
   padding-bottom: 2.2rem;
+  font-weight: 700;
 }
 .maintenance-detail-option-text{
   padding: 2.2rem 0;
   font-size: 2rem;
+  font-weight: 700
 }
 .maintenance-detail-kinds-part{
   display: flex;
 }
-.maintenance-detail-kinds-part p:nth-child(1){
+.maintenance-kinds-part-text{
   width: 31.4%;
   background: #ffebe2;
   padding: 1.4rem 0;
+  font-weight: 700;
 }
-.maintenance-detail-kinds-part p:nth-child(2){
+.maintenance-kinds-price{
   width: 68.6%;
   line-height: 5.2rem;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 2rem;
 }
 .maintenance-detail-kinds-part:nth-child(1) p:nth-child(1){
@@ -1461,7 +1530,7 @@ form .contact-form-part textarea{
 }
 .maintenance-detail-title-orange p{
   font-size: 2.6rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-refreshing-content{
   padding: 2.3rem 3.2rem 5.4rem 3.2rem;
@@ -1473,11 +1542,12 @@ form .contact-form-part textarea{
   background: #ffefe7;
   font-size: 2.4rem;
   padding: 1.1rem 0;
+  font-weight: 700;
 }
 .maintenance-detail-content-orange-text{
   padding: 2.2rem 7.3rem 2.8rem 7.3rem;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
 }
 .maintenance-detail-construction{
@@ -1499,7 +1569,10 @@ form .contact-form-part textarea{
   color: white;
   font-size: 2rem;
   padding: 0.7rem;
-  font-weight: 100;
+  font-weight: 400;
+}
+.maintenance-detail-construction-before img{
+  border: 2px solid #767676;
 }
 .maintenance-detail-construction-after span{
   content: '';
@@ -1510,7 +1583,10 @@ form .contact-form-part textarea{
   color: white;
   font-size: 2rem;
   padding: 0.7rem;
-  font-weight: 100;
+  font-weight: 400;
+}
+.maintenance-detail-construction-after img{
+  border: 2px solid #FF783C;
 }
 .maintenance-detail-refresing-result{
   border-bottom: 1px solid #707070;
@@ -1518,19 +1594,55 @@ form .contact-form-part textarea{
 }
 .maintenance-detail-refresing-result-part{
   display: flex;
-  margin-bottom: 5.2rem;
+  margin-bottom: 1.6rem;
+  width: 73.5rem;
+  background: #f0f9f8;
+  padding: 10px;
+}
+.maintenance-detail-refresing-result-part2{
+  display: flex;
+  margin-bottom: 1.6rem;
+  width: 73.5rem;
+  background: #f0f9f8;
+  padding: 0 10px;
+}
+.maintenance-refresing-good2{
+  font-size: 2rem;
+  color: #26B7A1;
+  margin: 3.1rem 3rem 3.1rem 0;  
+  font-weight: 700;
+  border-radius: 5rem;
+  background: white;
+  width: 11.6rem;
+  height: 3.8rem;
+  line-height: 3.8rem;
+}
+.maintenance-refresing-text2{
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 700;
+  line-height: 3.8rem;
+  padding: 1rem 0;
 }
 .maintenance-detail-refresing-result-part:last-child{
   margin: 0;
 }
-.maintenance-detail-refresing-result-part p:nth-of-type(1){
+.maintenance-refresing-good{
   font-size: 2rem;
   color: #26B7A1;
   margin-right: 3rem;
+  font-weight: 700;
+  border-radius: 5rem;
+  background: white;
+  width: 11.6rem;
+  height: 3.8rem;
+  line-height: 3.8rem;
 }
-.maintenance-detail-refresing-result-part p:nth-of-type(2){
+.maintenance-refresing-text{
   font-size: 2rem;
   text-align: left;
+  font-weight: 700;
+  line-height: 3.8rem;
 }
 .maintenance-detail-refresing-price{
   display: flex;
@@ -1538,13 +1650,16 @@ form .contact-form-part textarea{
   width: 61.6rem;
   margin: 0 auto;
 }
-.maintenance-detail-refresing-price p:nth-of-type(1){
+.maintenance-refresing-price-text{
   font-size: 2rem;
   margin-right: 3rem;
+  font-weight: 700;
+  line-height: 4.5rem;
 }
-.maintenance-detail-refresing-price p:nth-of-type(2){
+.maintenance-refresing-price{
   font-size: 5rem;
   line-height: 3.5rem;
+  font-weight: 700;
   text-align: right;
   color: #dc000c;
 }
@@ -1555,7 +1670,7 @@ form .contact-form-part textarea{
   background: #ffefd6;
   padding: 1.4rem 0;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-refresing-coupon span{
   color: #DC000C;
@@ -1565,6 +1680,7 @@ form .contact-form-part textarea{
   font-size: 2rem;
   margin-bottom: 1.7rem;
   margin-top: 3.2rem;
+  font-weight: 700;
 }
 .maintenance-detail-refresing-full-course span{
   color: #DC000C;
@@ -1577,6 +1693,7 @@ form .contact-form-part textarea{
   background: #26b7a1;
   padding: 3rem 0;
   font-size: 2rem;
+  font-weight: 700;
 }
 .maintenance-detail-refresing-full-course a::after{
   content: url('../image/after_maintenance_arrow_emerald2.svg');
@@ -1602,7 +1719,7 @@ form .contact-form-part textarea{
 .maintenance-detail-refresh-content .maintenance-detail-content-orange-text, .maintenance-detail-refresh-content2 .maintenance-detail-content-orange-text{
   padding: 2.2rem 7.3rem 2rem 7.3rem;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   line-height: 4rem;
 }
@@ -1612,22 +1729,24 @@ form .contact-form-part textarea{
 }
 .maintenance-detail-refresh-content .maintenance-detail-construction img, .maintenance-detail-refresh-content2 .maintenance-detail-construction img{
   object-fit: cover;
+  border: 1px solid #767676;
 }
-
 .maintenance-detail-refresh-price{
   display: flex;
   padding: 3.3rem 0rem 1.8rem 0rem;
   width: 61.6rem;
   margin: 0 auto;
 }
-.maintenance-detail-refresh-price p:nth-of-type(1){
+.maintenance-refresh-text{
   font-size: 2rem;
   margin-right: 3rem;
+  font-weight: 700;
 }
-.maintenance-detail-refresh-price p:nth-of-type(2){
+.maintenance-refresh-price{
   font-size: 5rem;
   text-align: right;
   color: #dc000c;
+  font-weight: 700;
 }
 .maintenance-detail-refresh-content2 .maintenance-detail-refresh-price{
   padding: 3.3rem 0rem 2.2rem 0rem;
@@ -1641,7 +1760,7 @@ form .contact-form-part textarea{
 .maintenance-detail-notes{
   margin-top: 2.2rem;
   text-align: left;
-  font-weight: 100;
+  font-weight: 400;
 }
 /* フルコース */
 .maintenance-detail-full-course{
@@ -1661,7 +1780,7 @@ form .contact-form-part textarea{
 }
 .maintenance-detail-title-emerald p{
   font-size: 2.6rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-full-course-content{
   padding: 0 3.2rem 2rem 3.2rem;
@@ -1670,6 +1789,7 @@ form .contact-form-part textarea{
   background: #FFEBE2;
   font-size: 2.4rem;
   padding: 1.1rem 0;
+  font-weight: 700;
 }
 .maintenance-detail-full-course-refreshing{
   display: flex;
@@ -1679,16 +1799,18 @@ form .contact-form-part textarea{
   width: 40.3rem;
   background: #fff;
 }
-.maintenance-detail-full-course-part p:nth-of-type(1){
+.maintenance-full-course-text{
   font-size: 2rem;
   border: 1px solid #26ad97;
   padding: 1.2rem 0;
   margin-top: 1.6rem;
+  font-weight: 700;
 }
-.maintenance-detail-full-course-part p:nth-of-type(2){
+.maintenance-full-course-price{
   color: #DC000C;
   font-size: 3.5rem;
   padding: 2.8rem 0 0rem 0;
+  font-weight: 700;
 }
 .maintenance-detail-full-course-part span{
   font-size: 2rem;
@@ -1717,15 +1839,17 @@ form .contact-form-part textarea{
   border-top: 1px solid #707070;
   margin-top: 1.6rem;
 }
-.maintenance-detail-full-course-coupon p:nth-of-type(1){
+.maintenance-full-course-coupon-text{
   font-size: 2rem;
   margin-right: 3rem;
+  font-weight: 700;
 }
-.maintenance-detail-full-course-coupon p:nth-of-type(2){
+.maintenance-full-course-coupon-price{
   line-height: 2.9rem;
   font-size: 5rem;
   text-align: right;
   color: #dc000c;
+  font-weight: 700;
 }
 .maintenance-detail-full-bottom{
   padding: 0 3.2rem;
@@ -1749,7 +1873,7 @@ form .contact-form-part textarea{
 }
 .maintenance-detail-title-gray p{
   font-size: 2.6rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 .maintenance-detail-others-content{
   padding: 0 3.2rem 4.3rem 3.2rem;
@@ -1762,10 +1886,11 @@ form .contact-form-part textarea{
   margin-bottom: 1.9rem;
   font-size: 2.4rem;
   padding: 0.7rem 0;
+  font-weight: 700;
 }
 .maintenance-detail-content-others-text{
   font-size: 1.8rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: left;
 }
 .maintenance-detail-content-others-pay{
@@ -1776,10 +1901,257 @@ form .contact-form-part textarea{
   background: #e3e2e2;
   padding: 0 2.75rem;
   line-height: 12.1rem;
+  font-weight: 700;
 }
 .maintenance-detail-content-others-pay-text{
   font-size: 1.8rem;
   padding: 2rem 0 2rem 1.9rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: left;
+}
+
+
+.header-hamburger-menu {
+  display: block;
+  position: fixed;
+  width: 3.48rem;
+  height: 2.6rem;
+  right: 0;
+  margin: 2.4rem 1rem 0 0;
+  z-index: 10;
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+}
+.header-hamburger-menu.active span:nth-child(1) {
+  transform: translateY(11px) rotate(405deg);
+  transition: 0.5s;
+  background-color: #fff;
+}
+.header-hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s;
+  background-color: #fff;
+}
+.header-hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-14px) rotate(315deg);
+  transition: 0.5s;
+  background-color: #fff;
+}
+.header-mask-menu {
+  position: fixed;
+  background: #282F35;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-500px);
+  transition: 0.5s;
+}
+.header-mask-menu ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.header-mask-menu ul li {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: white;
+}
+.header-mask-menu.active {
+  transform: translateY(0px);
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: visible;
+  z-index: 3;
+}
+
+/* SP版レスポンシブ対応 */
+@media (max-width : 599px) {
+  .container-660 {
+    width: 45rem;
+  }
+  /* ヘッダー */
+  .header{
+    height: 6.25rem;
+  }
+  .header .header-left{
+    padding-top: 0.625rem;
+    padding-left: 1.75rem;
+  }
+  .header .header-right{
+    display: none;
+  }
+  .header .header-left img{
+    width: 19.88rem;
+  }
+  .header-hamburger-menu {
+    opacity: 1;
+    pointer-events: visible;
+    margin-top: 1.875rem;
+    margin: 0 2.5rem 0 0;
+  }
+  .header-hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #D6101D;
+    position: absolute;
+    left: 3px;
+  }
+  .header-hamburger-menu span:nth-child(1) {
+    top: 0;
+    transition: 0.5s;
+  }
+  .header-hamburger-menu span:nth-child(2) {
+    top: 1.25rem;
+    transition: 0.5s;
+  }
+  .header-hamburger-menu span:nth-child(3) {
+    top: 2.625rem;
+    transition: 0.5s;
+  }
+  /* ヘッダー */
+
+  /* 共通部品 */
+  .common-btn{
+    width: 36rem;
+    height: 5.5rem;
+    font-size: 1.625rem;
+    margin-top: 2rem;
+    padding: 1.1rem 0;
+    border: 1.5px solid white;
+  }
+  .common-btn:hover{
+    opacity: 0.6;
+  }
+  .common-btn::after{
+    top: 16%;
+    transform: scale(0.6);
+  }
+  /* 共通部品 */
+
+  /* TOPページ */
+  .main-visual img:nth-of-type(1) {
+    display: block;
+  }
+  .main-visual img:nth-of-type(2) {
+    display: none;
+  }
+
+  .slick-prev{
+    left: 3% !important;
+  }
+  .slick-prev::before{
+    top: 20%;
+    transform: rotate(180deg) scale(0.8);
+    left: 32%;
+  }
+  .slick-next{
+    right: 9% !important;
+  }
+  .slick-next::before{
+    top: 26%;
+    left: 39%;
+    transform: scale(0.8);
+  }
+  .about{
+    opacity: 1;
+    transform: translateY(0px);
+    padding: 4.18rem 0 3.75rem 0;
+  }
+  .about-text{
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .business{
+    padding: 3.5rem 0;
+    background: linear-gradient(171.5deg, #dc000c 0%, #dc000c 60.5%, #FF783C 40%, #FF783C 100%);
+  }
+  .business-used, .business-maintenance{
+    width: 100%;
+    margin-bottom: 5.81rem;
+  }
+  .business-used h2, .business-maintenance h2{
+    font-size: 2rem;
+    margin-bottom: 1.94rem;
+  }
+  .business-used-box, .business-maintenance-box{
+    height: 50rem;
+  }
+  .business-used-box-top, .business-maintenance-box-top{
+    height: 26.87rem;
+  }
+  .business-used-box-bottom, .business-maintenance-box-bottom{
+    padding: 2.81rem 4.56rem 3.25rem 4.56rem;
+  }
+  .business-used-box-bottom p, .business-maintenance-box-bottom p{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+  .business-trouble{
+    margin-top: 10rem;
+  }
+  .business-trouble-text{
+    font-size: 2rem;
+    margin-bottom: 5.06rem;
+  }
+  .business-trouble-content-part{
+    width: 16.1rem;
+    margin-bottom: 3.75rem;
+  }
+  .business-trouble-content-img{
+    width: 16rem;
+    height: 16rem;
+    padding: 3.8rem 0;
+    margin: 0 0 2rem 0;
+  }
+  .business-trouble-content-part p{
+    font-size: 1.4rem;
+  }
+  .business-trouble-content-part:nth-child(1) img{
+    width: 6.8rem;
+  }
+  .business-trouble-content-part:nth-child(2) img{
+    width: 9.8rem;
+  }
+  .business-trouble-content-part:nth-child(3) img{
+    width: 9rem;
+  }
+  .business-trouble-content-part:nth-child(4) img{
+    width: 8rem;
+  }
+  .company-title{
+    margin: 5rem 0 4.25rem 0;
+    font-size: 2.5rem;
+  }
+  .company-feature{
+    margin-bottom: 2.69rem;
+  }
+  .company-feature h3:not(:last-child){
+    height: 12.1rem;
+    width: 12.1rem;
+    font-size: 1.56rem;
+    line-height: 12.8rem;
+  }
+  .company-feature h3:last-child{
+    height: 12.1rem;
+    width: 12.1rem;
+    font-size: 1.56rem;
+    line-height: 1;
+    padding-top: 4.7rem;
+  }
+  .company-text{
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+  }
+  .company-slider{
+    margin-top: 2.69rem;
+  }
+  /* TOPページ */
 }

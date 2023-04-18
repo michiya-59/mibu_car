@@ -12,7 +12,7 @@
   <!-- GoogleFonts指定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Roboto:wght@900&display=swap" rel="stylesheet">
   <title>【公式】ミブ自動車販売|京都で地域密着 50 年以上の実績!中古車販売・車検・整備 </title>
   <meta name="description" content= "京都市左京区のミブ自動車販売は新車・中古車販売・車検整備はもちろんのこと、鈑金・塗装・保険までお客さまの立場に立ってあらゆる角度から満足していただけるようカーライフをサポートします。">
 </head>
@@ -31,7 +31,7 @@
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
         <div class="header-info">
-          <p>tel.075-791-6156</p>
+          <p>tel.<a href="tel:0757916156">075-791-6156</a></p>
           <p>受付時間／9:00〜18:00<br>
             (月〜土曜)</p>
         </div>
@@ -46,16 +46,16 @@
 
     <!-- スライダー -->
     <section class="slider">
-      <div><img src="image/demo_car1.png"></div>
-      <div><img src="image/demo_car2.png"></div>
-      <div><img src="image/demo_car2.png"></div>
-      <div><img src="image/demo_car1.png"></div>
-      <div><img src="image/demo_car2.png"></div>
-      <div><img src="image/demo_car2.png"></div>
+      <div class="slider-image"><img src="image/car_image.svg"></div>
+      <div class="slider-image"><img src="image/car_image2.svg"></div>
+      <div class="slider-image"><img src="image/car_image2.svg"></div>
+      <div class="slider-image"><img src="image/car_image.svg"></div>
+      <div class="slider-image"><img src="image/car_image2.svg"></div>
+      <div class="slider-image"><img src="image/car_image2.svg"></div>
     </section>
 
     <!-- 会社案内について -->
-    <section class="about slide-in" id="about">
+    <section class="about slide-up" id="about">
       <div class="container-660">
         <p class="about-text">
           この地にオープンして50年以上、<br>
@@ -63,7 +63,9 @@
           アットホームな雰囲気でなんでも相談しやすい<br>
           コーヒーの美味しい車屋さんです!<br>
         </p>
-        <a href="" class="common-btn red">会社案内</a>
+        <div class="about-buttonarea">
+          <a href="#company" class="common-btn red">会社案内</a>
+        </div>
       </div>
     </section>
 
@@ -71,8 +73,8 @@
     <section id="business" class="business">
       <div class="container-660">
         <div class="business-used">
-          <h2 class="slide-in">中古車販売</h2>
-          <div class="business-used-box slide-in">
+          <h2 class="slide-up">中古車販売</h2>
+          <div class="business-used-box slide-up">
             <div class="business-used-box-top">
               <img src="image/demo_car4.png" alt="">
             </div>
@@ -83,14 +85,16 @@
                 買取されたばかりの新鮮中古車の中から<br>
                 お気に入りの1台をお探し致します。
               </p>
-              <a href="" class="common-btn orange">中古車販売ページへ</a>
+              <div class="business-buttonarea">
+                <a href="user_car.html" class="common-btn orange">中古車販売ページへ</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="business-maintenance">
-          <h2 class="slide-in">アフターメンテナンス・その他サービス</h2>
-          <div class="business-maintenance-box slide-in">
+          <h2 class="slide-up">アフターメンテナンス・その他サービス</h2>
+          <div class="business-maintenance-box slide-up">
             <div class="business-maintenance-box-top">
               <img src="image/demo_car5.png" alt="">
             </div>
@@ -99,18 +103,20 @@
                 アフターメンテナンスから修理・車検・<br>
                 各種整備・自動車保険まで承ります。
               </p>
-              <a href="" class="common-btn orange">アフターメンテナンスページへ</a>
+              <div class="business-buttonarea">
+                <a href="after_maintenance.html" class="common-btn orange">アフターメンテナンスページへ</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="business-trouble">
-          <p class="business-trouble-text slide-in">
+          <p class="business-trouble-text slide-up">
             こんなお悩み・ご希望は<br>
             ミブ自動車販売にお任せください！
           </p>
           <div class="business-trouble-content">
-            <div class="business-trouble-content-part slide-in">
+            <div class="business-trouble-content-part slide-up">
               <div class="business-trouble-content-img">
                 <img src="image/beginner.svg" alt="">
               </div>
@@ -120,7 +126,7 @@
                 よくわからない
               </p>
             </div>
-            <div class="business-trouble-content-part slide-in">
+            <div class="business-trouble-content-part slide-up">
               <div class="business-trouble-content-img">
                 <img src="image/total.svg" alt="">
               </div>
@@ -130,7 +136,7 @@
                 トータルで任せたい
               </p>
             </div>
-            <div class="business-trouble-content-part slide-in">
+            <div class="business-trouble-content-part slide-up">
               <div class="business-trouble-content-img">
                 <img src="image/communicate.svg" alt="">
               </div>
@@ -140,7 +146,7 @@
                 お願いしたい
               </p>
             </div>
-            <div class="business-trouble-content-part slide-in">
+            <div class="business-trouble-content-part slide-up">
               <div class="business-trouble-content-img">
                 <img src="image/maintenance.svg" alt="">
               </div>
@@ -158,8 +164,8 @@
     <!-- 会社案内 -->
     <section class="company" id="company">
       <div class="container-660">
-        <h1 class="company-title slide-in">会社案内</h1>
-        <div class="company-feature slide-in">
+        <h1 class="company-title slide-up">会社案内</h1>
+        <div class="company-feature slide-up">
           <h3>地域密着</h3>
           <h3>親切丁寧</h3>
           <h3>
@@ -167,7 +173,7 @@
             実績多数<br>
           </h3>
         </div>
-        <p class="company-text slide-in">
+        <p class="company-text slide-up">
           お客さまの立場に立って<br>
           あらゆる角度から満足していただけるよう<br>
           カーライフをサポートします。<br>
@@ -177,41 +183,41 @@
       </div>
       <div class="container">
         <div class="company-slider">
-          <div><img src="image/demo_car1.png"></div>
-          <div><img src="image/demo_car2.png"></div>
-          <div><img src="image/demo_car1.png"></div>
+          <div><img src="image/car_image.svg"></div>
+          <div><img src="image/car_image2.svg"></div>
+          <div><img src="image/car_image.svg"></div>
         </div>
 
         <div class="company-info">
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>会社名</p>
             <p>株式会社ミブ自動車販売</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>所在地</p>
             <p>〒606-8013 京都府京都市左京区山端大君町16−3</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>電話番号</p>
             <p>075-791-6156</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>設立</p>
             <p>1967年1月</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>代表者</p>
             <p>小野 剛</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>営業時間</p>
             <p>月〜土曜日 9:00〜18:00</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>定休日</p>
             <p>日曜・祝日、第2・4土曜日</p>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>事業内容</p>
             <div class="company-business-content">
               <p>
@@ -223,7 +229,7 @@
               </p>
             </div>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>設備</p>
             <div class="company-facilities">
               <p>
@@ -234,7 +240,7 @@
               </p>
             </div>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>所有資格</p>
             <div class="company-qualification">
               <p>
@@ -243,7 +249,7 @@
               </p>
             </div>
           </div>
-          <div class="company-info-part slide-in">
+          <div class="company-info-part slide-up">
             <p>その他</p>
             <p>近畿運輸局認証工場</p>
           </div>
@@ -267,14 +273,16 @@
             <h1>tel.075-791-6156</h1>
             <p>受付時間／9:00〜18:00(月〜土曜)</p>
           </div>
-          <a href="contact.html" ><img src="image/footer_contact.svg" alt=""></a>
+          <div class="footer-buttonarea">
+            <a href="contact.html" class="footer-contact-btn orange">ウェブからのお問い合わせはこちら</a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom-content-left">
           <img src="image/footer_logo.svg" alt="">
-          <h2>tel.075-791-6156</h2>
-          <p>〒606-8013 京都府京都市左京区山端大君町16−3</p>
+          <p class="footer-bottom-tel">tel.075-791-6156</p>
+          <p class="footer-bottom-address">〒606-8013 京都府京都市左京区山端大君町16−3</p>
         </div>
         <ul class="footer-bottom-content-right">
           <li><a href="index.html">TOP</a></li>
