@@ -272,6 +272,11 @@ header{
   margin-bottom: 0;
   font-weight: 700;
 }
+.footer-tel a, .footer-bottom-tel a{
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
 .footer-sales{
   padding-left: 2rem;
   font-size: 1.8rem;
