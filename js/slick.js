@@ -38,5 +38,6 @@ $(function () {
     slidesToShow: 10,
     asNavFor: ".detail-slider",
     focusOnSelect: true,
+    arrows: false,
   });
 });

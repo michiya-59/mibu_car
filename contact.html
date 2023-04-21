@@ -31,11 +31,25 @@
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
         <div class="header-info">
-          <p>tel.075-791-6156</p>
+          <p>tel.<a href="tel:0757916156">075-791-6156</a></p>
           <p>受付時間／9:00〜18:00<br>
             (月〜土曜)</p>
         </div>
       </nav>
+      <div id="header-hamburger-menu" class="header-hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="header-mask-menu" class="header-mask-menu">
+        <ul>
+          <a href="index.html" id="header-top"><li>TOP</li></a>
+          <a href="user_car.html" id="header-user-car"><li>中古車販売</li></a>
+          <a href="after_maintenance.html" id="header-after-maintenance"><li>アフターメンテナンス</li></a>
+          <a href="index.html#company" id="header-company"><li>会社案内</li></a>
+          <a href="contact.html" id="header-contact"><li>お問い合わせ</li></a>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
@@ -154,13 +168,16 @@
     <div class="footer">
       <div class="footer-top">
         <button><img src="image/top_back_btn.svg" id="back-to-top" class="commont-top-btn" alt=""></button>
-        <h1>お問い合わせ</h1>
+        <h1 class="footer-title">お問い合わせ</h1>
         <div class="footer-top-contact">
           <div class="footer-top-contact-left">
-            <h1>tel.075-791-6156</h1>
-            <p>受付時間／9:00〜18:00(月〜土曜)</p>
+            <p class="footer-tel">tel.075-791-6156</p>
+            <p class="footer-sales">受付時間／9:00〜18:00(月〜土曜)</p>
           </div>
-          <a href="contact.html" ><img src="image/footer_contact.svg" alt=""></a>
+          <div class="footer-buttonarea">
+            <a href="contact.html"><img src="image/footer_contact_tel_sp.svg" alt=""></a>
+            <a href="contact.html"><img src="image/footer_contact_web_sp.svg" alt=""></a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -184,5 +201,6 @@
   <script src="slick_js/slick.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/back_top.js"></script>
+  <script src="js/hamburger.js"></script>
 </body>
 </html>

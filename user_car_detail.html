@@ -31,11 +31,25 @@
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
         <div class="header-info">
-          <p>tel.075-791-6156</p>
+          <p>tel.<a href="tel:0757916156">075-791-6156</a></p>
           <p>受付時間／9:00〜18:00<br>
             (月〜土曜)</p>
         </div>
       </nav>
+      <div id="header-hamburger-menu" class="header-hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="header-mask-menu" class="header-mask-menu">
+        <ul>
+          <a href="index.html" id="header-top"><li>TOP</li></a>
+          <a href="user_car.html" id="header-user-car"><li>中古車販売</li></a>
+          <a href="after_maintenance.html" id="header-after-maintenance"><li>アフターメンテナンス</li></a>
+          <a href="index.html#company" id="header-company"><li>会社案内</li></a>
+          <a href="contact.html" id="header-contact"><li>お問い合わせ</li></a>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
@@ -49,7 +63,7 @@
       <div class="detail-container">
         <div class="container">
           <div class="detail-content">
-            <h2 class="slide-in detail-userd-title">車名が入ります</h2>
+            <h2 class="detail-userd-title">車名が入ります</h2>
             <div class="detail-slider-container">
               <div class="detail-slider">
                 <div class="detail-slider-slick-img">
@@ -97,7 +111,7 @@
                 <div class="detail-thumbnail-img">
                   <img src="image/car_image.svg" alt="">
                 </div>
-                <div class="detail-thumbnail-img">
+                <div class="detail-thumbnail-img detail-thumbnail-last">
                   <img src="image/car_image.svg" alt="">
                 </div>
                 <div class="detail-thumbnail-img">
@@ -112,7 +126,7 @@
                 <div class="detail-thumbnail-img">
                   <img src="image/car_image.svg" alt="">
                 </div>
-                <div class="detail-thumbnail-img">
+                <div class="detail-thumbnail-img detail-thumbnail-last">
                   <img src="image/car_image.svg" alt="">
                 </div>
               </div>
@@ -182,6 +196,78 @@
                 </tr>
               </tbody>
             </table>
+            <table class="detail-data-table-sp">
+              <tbody>
+                <tr class="detail-tr">
+                  <th>車名</th>
+                  <td>車名が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>支払い金額（税込）</th>
+                  <td>支払い金額が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>メーカー</th>
+                  <td>メーカーが入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>形式</th>
+                  <td>形式が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>ボディタイプ</th>
+                  <td>ボディタイプが入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>グレード</th>
+                  <td>グレードが入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>車台番号</th>
+                  <td>車台番号が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>カラー</th>
+                  <td>カラーが入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>排気量</th>
+                  <td>排気量が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>走行距離</th>
+                  <td>走行距離が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>燃料</th>
+                  <td>燃料が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>車検</th>
+                  <td>令和00年00月</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>シフト</th>
+                  <td>シフトが入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>エアコン</th>
+                  <td>エアコンが入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>乗車定員</th>
+                  <td>乗車定員が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>積載量</th>
+                  <td>積載量が入ります</td>
+                </tr>
+                <tr class="detail-tr">
+                  <th>駆動方式</th>
+                  <td>駆動方式が入ります</td>
+                </tr>
+              </tbody>
+            </table>
 
             <h2 class="detail-equipment">装備</h2>
             <p class="detail-equipment-lists">
@@ -202,7 +288,9 @@
                 <p class="detail-contact-sales">受付時間／9:00〜18:00(月〜土曜)</p>
               </div>
               <div class="detail-buttonarea">
+                <a href="contact.html"><img src="image/footer_contact_tel_sp.svg" alt=""></a>
                 <a href="contact.html"><img src="image/footer_contact.svg" alt=""></a>
+                <a href="contact.html"><img src="image/footer_contact_web_sp.svg" alt=""></a>
               </div>
             </div>
           </div>
@@ -214,7 +302,7 @@
     <section class="search">
       <div class="container">
         <div class="search-maker">
-          <h2>メーカーから探す</h2>
+          <h2 class="search-maker-title">メーカーから探す</h2>
           <ul class="search-maker-list">
             <a href=""><li>トヨタ</li></a>
             <a href=""><li>ホンダ</li></a>
@@ -231,7 +319,7 @@
           </ul>
         </div>
         <div class="search-body-type">
-          <h2>ボディタイプから探す</h2>
+          <h2 class="search-body-type-title">ボディタイプから探す</h2>
           <ul class="search-body-type-list">
             <a href=""><li>軽自動車</li></a>
             <a href=""><li>トラック</li></a>
@@ -249,8 +337,8 @@
     <!-- 新車販売文言 -->
     <section class="new-car-sales">
       <div class="container">
-        <p>新車販売もおまかせください！</p>
-        <p>元日産新車ディーラーでの経験を活かして、最良の各メーカーのお車をご提供致します！詳細はお問い合わせください。</p>
+        <p class="new-car-title">新車販売もおまかせください！</p>
+        <p class="new-car-text">元日産新車ディーラーでの経験を活かして、最良の各メーカーのお車をご提供致します！詳細はお問い合わせください。</p>
       </div>
     </section>
   </main>
@@ -258,14 +346,15 @@
     <div class="footer">
       <div class="footer-top">
         <button><img src="image/top_back_btn.svg" id="back-to-top" class="commont-top-btn" alt=""></button>
-        <h1>お問い合わせ</h1>
+        <h1 class="footer-title">お問い合わせ</h1>
         <div class="footer-top-contact">
           <div class="footer-top-contact-left">
-            <h1>tel.075-791-6156</h1>
-            <p>受付時間／9:00〜18:00(月〜土曜)</p>
+            <p class="footer-tel">tel.075-791-6156</p>
+            <p class="footer-sales">受付時間／9:00〜18:00(月〜土曜)</p>
           </div>
-          <div class="detail-buttonarea">
-            <a href="contact.html"><img src="image/footer_contact.svg" alt=""></a>
+          <div class="footer-buttonarea">
+            <a href="contact.html"><img src="image/footer_contact_tel_sp.svg" alt=""></a>
+            <a href="contact.html"><img src="image/footer_contact_web_sp.svg" alt=""></a>
           </div>
         </div>
       </div>
@@ -290,5 +379,6 @@
   <script src="slick_js/slick.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/back_top.js"></script>
+  <script src="js/hamburger.js"></script>
 </body>
 </html>

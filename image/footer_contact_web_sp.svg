@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="551" height="106" viewBox="0 0 551 106">
+  <defs>
+    <filter id="長方形_1101" x="0" y="0" width="551" height="106" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="長方形_26" data-name="長方形 26" width="37.003" height="34.73" fill="none"/>
+    </clipPath>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#長方形_1101)">
+    <g id="長方形_1101-2" data-name="長方形 1101" transform="translate(9 4)" fill="#ff783c" stroke="#fff" stroke-width="3">
+      <rect width="533" height="88" rx="44" stroke="none"/>
+      <rect x="1.5" y="1.5" width="530" height="85" rx="42.5" fill="none"/>
+    </g>
+  </g>
+  <text id="ウェブからのお問い合わせはこちら" transform="translate(300.337 58)" fill="#fff" font-size="22" font-family="HiraginoSans-W6, Hiragino Sans"><tspan x="-176" y="0">ウェブからのお問い合わせはこちら</tspan></text>
+  <g id="グループ_2002" data-name="グループ 2002" transform="translate(73.663 32)">
+    <path id="パス_29" data-name="パス 29" d="M41.947,48.972,43.4,47.213l2.747,4.174,2.057-1.354-2.747-4.176,1.93-.837-6.195-3.543Z" transform="translate(-16.543 -16.658)" fill="#fff"/>
+    <g id="グループ_48" data-name="グループ 48" transform="translate(0 0)">
+      <g id="グループ_47" data-name="グループ 47" clip-path="url(#clip-path)">
+        <path id="パス_30" data-name="パス 30" d="M33.534,0H3.47A3.469,3.469,0,0,0,0,3.469V28.908a3.47,3.47,0,0,0,3.47,3.469H24.357l-.3-2.891H3.47a.579.579,0,0,1-.579-.578V7.516H34.112V28.908a.579.579,0,0,1-.578.578H31.748l1.918,2.884A3.466,3.466,0,0,0,37,28.908V3.469A3.469,3.469,0,0,0,33.534,0M21.947,5.276A1.373,1.373,0,1,1,23.32,3.9a1.374,1.374,0,0,1-1.373,1.373m5.095,0A1.373,1.373,0,1,1,28.415,3.9a1.373,1.373,0,0,1-1.373,1.373m5.1,0A1.373,1.373,0,1,1,33.51,3.9a1.374,1.374,0,0,1-1.373,1.373" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="FORM" transform="translate(7.67 19.992)" fill="#fff" font-size="8" font-family="Helvetica"><tspan x="0" y="0" letter-spacing="-0.019em">F</tspan><tspan y="0">ORM</tspan></text>
+  </g>
+</svg>
