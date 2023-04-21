@@ -1168,6 +1168,7 @@ form .contact-form-part textarea{
   left: -2.6rem;
   line-height: 2.8rem;
   padding-top: 4rem;
+  padding-left: 0.7rem;
   font-size: 2rem;
 }
 .maintenance-menu-emerald::after{
@@ -1660,7 +1661,7 @@ form .contact-form-part textarea{
 .maintenance-detail-refresing-result-part2{
   display: flex;
   margin-bottom: 1.6rem;
-  width: 73.5rem;
+  width: 100%;
   background: #f0f9f8;
   padding: 0 10px;
 }
@@ -2216,6 +2217,9 @@ form .contact-form-part textarea{
   .maintenance-menu-gray::after{
     right: 28%;
   }
+  .maintenance-menu-emerald::before{
+    padding-left: 0;
+  }
 }
 @media (max-width: 775px){
   .detail-contact-content{
@@ -2242,6 +2246,9 @@ form .contact-form-part textarea{
   }
   .detail-buttonarea a:nth-of-type(3) img{
     width: 100%;
+  }
+  .maintenance-menu-emerald::before{
+    padding-left: 0;
   }
 }
 /* SP版レスポンシブ対応 */
@@ -2933,6 +2940,7 @@ form .contact-form-part textarea{
     padding-top: 4rem;
     transform: scale(0.6);
     font-size: 2rem;
+    padding-left: 0.7rem;
   }
   .maintenance-free-text::after{
     border-width: 16px 13.5px 0 13.5px;
