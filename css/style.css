@@ -332,6 +332,7 @@ header{
   padding: 3rem 0;
   max-width: 115.2rem;
   margin: 0 auto;
+  width: 90%;
 }
 .footer-bottom-content-left{
   width: 53rem;
@@ -2200,7 +2201,7 @@ form .contact-form-part textarea{
   }
   .footer-buttonarea a:nth-of-type(1), .footer-buttonarea a:nth-of-type(2){
     display: block;
-    width: 71%;
+    width: 59%;
     margin: 0 auto;
   }
   /* フッター */
@@ -2224,6 +2225,11 @@ form .contact-form-part textarea{
   }
   .maintenance-menu-emerald::before{
     padding-left: 0;
+  }
+}
+@media (max-width: 960px){
+  .footer-top-contact-left{
+    width: 63%;
   }
 }
 @media (max-width: 775px){
@@ -3072,6 +3078,10 @@ form .contact-form-part textarea{
     text-align: center;
     font-size: 1.25rem;
     width: 5%;
+  }
+  .maintenance-detail-legal-fee table tr:nth-child(3) td,
+  .maintenance-detail-legal-fee table tr:nth-child(4) td{
+    text-align: right;
   }
   .maintenance-detail-legal-fee table tr:nth-child(5) td,
   .maintenance-detail-legal-fee table tr:nth-child(7) td{
